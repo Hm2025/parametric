@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --gold: #240237;
+  --navy: #240237;
+  --sand: #fff;
+  --light-gray: #240237;
+  --extra-light-gray: #fff;
+  --border-color: rgba(36, 2, 55, 0.2);
+  --text-color: var(--navy);
+  --bg-color: var(--white);
+  --side-padding: 1.333rem;
+  --section-spacing: 4rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --side-padding: 3.5rem;
+    --section-spacing: 7rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: var(--font-effra), sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+@layer components {
+  .section-padding {
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    padding-bottom: var(--section-spacing);
+  }
+
+  .text-gold { color: var(--gold); }
+  .border-gold { border-color: var(--border-color); }
+
+  .bg-navy { color: var(--white); }
+  .bg-navy .text-gold,
+  .bg-navy .text-navy { color: var(--white); }
+
+  .small-title {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    word-spacing: 0.17em;
+    letter-spacing: 0.05em;
+  }
+
+  .h1-display {
+    font-weight: 200;
+    font-size: 2.666rem;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  @media (min-width: 1024px) {
+    .h1-display { font-size: 5rem; }
+  }
+
+  .h2-display {
+    font-size: 1.666rem;
+    line-height: 1.158;
+    letter-spacing: 0.01em;
+  }
+
+  @media (min-width: 1024px) {
+    .h2-display { font-size: 1.9rem; }
+  }
+
+  .button-primary {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2em;
+    height: 3.266em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1;
+    word-spacing: 0.17em;
+    white-space: nowrap;
+    color: var(--gold);
+    border: 1px solid currentColor;
+    transition: opacity 0.15s;
+  }
+
+  .button-primary:hover { opacity: 1; }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 1s cubic-bezier(.35, 0, 0, 1), transform 1s cubic-bezier(.35, 0, 0, 1);
+  }
+
+  .fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
