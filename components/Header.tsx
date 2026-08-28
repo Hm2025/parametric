@@ -17,18 +17,22 @@ export default function Header() {
   }, [pathname])
 
   const navLinks = [
-    { label: 'Expertise', href: '/expertise', hasMega: true },
+    { label: 'Our Services', href: '/expertise', hasMega: true },
     { label: 'About', href: '/about' },
-    { label: 'People', href: '/people' },
-    { label: 'Careers', href: '/careers' },
+    { label: 'Our Team', href: '/people' },
     { label: 'News & Insights', href: '/news' },
     { label: 'Contact Us', href: '/contact' },
   ]
 
+  const expertiseMenu = services.slice(0, 4).map((service, index) => ({
+    ...service,
+    title: ['Investigations', 'Intelligence', 'Governance', 'Strategic Advisory'][index],
+  }))
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm transition-transform duration-500 ease-smooth">
       <div className="mx-auto max-w-content px-[var(--side-padding)]">
-        <div className="flex items-center justify-between py-6 border-b border-[var(--border-color)]">
+        <div className="flex items-center justify-between border-b border-[var(--border-color)] py-6">
           <Link href="/" className="relative z-10">
             <Image
               src="/images/Parametric%20Logo%20on%20Purple.png"
@@ -41,39 +45,79 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-14">
+          <nav className="hidden items-center gap-14 lg:flex">
             {navLinks.map((link) => (
               <div
                 key={link.label}
                 className="relative"
-                onMouseEnter={() => link.hasMega && setMegaOpen(true)}
-                onMouseLeave={() => link.hasMega && setMegaOpen(false)}
               >
-                <Link
-                  href={link.href}
-                  className="small-title text-white hover:text-white transition-colors relative py-5 px-8 -mx-8"
-                >
-                  {link.label}
-                  {link.hasMega && (
-                    <span className="inline-block ml-2 w-[0.45em] h-[0.45em] border-r border-t border-current transform rotate-[135deg] relative -top-0.5" />
-                  )}
-                </Link>
+                {link.hasMega ? (
+                  <div className="flex items-center">
+                    <Link
+                      href={link.href}
+                      className="small-title relative -mx-8 block px-8 py-5 text-white transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                    <button
+                      type="button"
+                      aria-label="Toggle services menu"
+                      onClick={() => setMegaOpen((value) => !value)}
+                      className="relative -ml-5 p-3 text-white transition-colors hover:text-white"
+                    >
+                      <span className="relative -top-0.5 inline-block h-[0.45em] w-[0.45em] rotate-[135deg] border-r border-t border-current" />
+                    </button>
+                  </div>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="small-title relative -mx-8 block px-8 py-5 text-white transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                )}
 
                 {link.hasMega && megaOpen && (
-                  <div className="absolute top-full left-0 w-screen max-w-content bg-navy border-t border-[var(--border-color)] shadow-xl pt-16 pb-12 px-[var(--side-padding)]">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
-                      {services.map((service) => (
-                        <Link
-                          key={service.slug}
-                          href={`/expertise/${service.slug}`}
-                          className="group block border-l border-[var(--border-color)] pl-6"
-                        >
-                          <div className="h-11 mb-8 bg-sand/10 group-hover:bg-sand/20 transition-colors" />
-                          <h3 className="small-title text-gold group-hover:text-white transition-colors">
-                            {service.title}
-                          </h3>
-                        </Link>
-                      ))}
+                  <div className="absolute left-1/2 top-full z-40 mt-3 w-[min(92vw,860px)] -translate-x-1/2 overflow-hidden border border-white/20 bg-[#240237] shadow-[0_24px_60px_rgba(0,0,0,0.32)]">
+                    <div className="grid grid-cols-1 lg:grid-cols-[38%_62%]">
+                      <div className="relative hidden min-h-[430px] overflow-hidden border-r border-white/20 lg:block">
+                        <Image
+                          src="/images/bg1.avif"
+                          alt=""
+                          fill
+                          className="object-cover opacity-65"
+                        />
+                        <div className="absolute inset-0 bg-[#240237]/50" />
+                        <div className="absolute inset-x-7 bottom-8">
+                          <p className="small-title mb-3 text-white/60">Our services</p>
+                          <p className="max-w-[15rem] text-2xl leading-tight text-white">Clarity when complexity matters.</p>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2">
+                        {expertiseMenu.map((service) => (
+                          <Link
+                            key={service.slug}
+                            href={`/expertise/${service.slug}`}
+                            className="group flex min-h-[150px] flex-col border-b border-white/20 p-5 transition-colors hover:bg-white/10 sm:min-h-[215px] sm:border-l sm:p-6"
+                            onClick={() => setMegaOpen(false)}
+                          >
+                            <div className="relative h-24 overflow-hidden bg-[#240237] sm:h-28">
+                              <Image
+                                src={service.image || '/images/bg1.avif'}
+                                alt={service.title}
+                                fill
+                                className="object-cover opacity-75 transition duration-700 group-hover:scale-105"
+                              />
+                            </div>
+                            <div className="mt-auto pt-5">
+                              <h3 className="small-title text-white">
+                                {service.title}
+                              </h3>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -113,7 +157,7 @@ export default function Header() {
                 </Link>
                 {link.hasMega && (
                   <div className="pb-4 pl-4 flex flex-col gap-2">
-                    {services.map((s) => (
+                    {expertiseMenu.map((s) => (
                       <Link
                         key={s.slug}
                         href={`/expertise/${s.slug}`}

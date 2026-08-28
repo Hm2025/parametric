@@ -3,6 +3,7 @@ export interface Service {
   title: string
   shortDesc: string
   icon: string
+  image?: string
 }
 
 export interface Article {
@@ -27,14 +28,14 @@ export interface TeamMember {
 }
 
 export const services: Service[] = [
-  { slug: 'corporate', title: 'Corporate Law', shortDesc: 'M&A, joint ventures, and corporate governance advisory for complex transactions.', icon: 'corporate' },
-  { slug: 'dispute-resolution', title: 'Dispute Resolution', shortDesc: 'Commercial litigation, arbitration, and mediation across multiple jurisdictions.', icon: 'dispute' },
-  { slug: 'finance', title: 'Banking & Finance', shortDesc: 'Structured finance, regulatory compliance, and secured lending arrangements.', icon: 'finance' },
-  { slug: 'real-estate', title: 'Real Estate', shortDesc: 'Development, investment, and property management legal frameworks.', icon: 'realestate' },
-  { slug: 'employment', title: 'Employment', shortDesc: 'Executive contracts, workplace policies, and tribunal representation.', icon: 'employment' },
-  { slug: 'intellectual-property', title: 'Intellectual Property', shortDesc: 'Patent prosecution, trademark strategy, and IP portfolio management.', icon: 'ip' },
-  { slug: 'tax', title: 'Tax Advisory', shortDesc: 'Domestic and cross-border tax planning, restructuring, and HMRC liaison.', icon: 'tax' },
-  { slug: 'private-client', title: 'Private Client', shortDesc: 'Wealth structuring, trusts, estates, and family office governance.', icon: 'private' },
+  { slug: 'special-situations-advisory', title: 'Special Situations Advisory', shortDesc: 'Strategic counsel and hands-on support from experienced experts in complex legal, commercial, regulatory, and reputational crises.', icon: 'special-situations', image: '/images/Impartial-Investigation-1.webp' },
+  { slug: 'dispute-resolution', title: 'Dispute Resolution', shortDesc: 'Commercial litigation, arbitration, and mediation across multiple jurisdictions.', icon: 'dispute', image: '/images/careers-feature.png' },
+  { slug: 'regulatory-and-compliance', title: 'Regulatory and Compliance', shortDesc: 'Deep expertise in regulatory compliance for both contentious and non-contentious situations in today’s complex global environment.', icon: 'regulatory', image: '/images/careers-hero.png' },
+  { slug: 'forensic-investigations-and-intelligence', title: 'Forensic Investigations and Intelligence', shortDesc: 'A holistic approach to the management of legal, regulatory, commercial, and reputational risks.', icon: 'forensic', image: '/images/people-hero.jpg' },
+  { slug: 'reputation-management-and-crisis-response', title: 'Reputation Management and Crisis Response', shortDesc: 'Multidisciplinary teams dealing with actions and events that threaten businesses, brands, and personal reputations.', icon: 'reputation', image: '/images/bg1.avif' },
+  { slug: 'fintech-and-digital-assets-advisory', title: 'Fintech and Digital Assets Advisory', shortDesc: 'Advice on regulation, investigations, digital assets, and complex cryptocurrency disputes.', icon: 'fintech', image: '/images/bg1.avif' },
+  { slug: 'civil-fraud', title: 'Civil Fraud', shortDesc: 'Expertise in civil fraud-related investigations, litigation, asset tracing, and recovery.', icon: 'fraud', image: '/images/bg1.avif' },
+  { slug: 'private-client-advisory', title: 'Private Client Advisory', shortDesc: 'Specific expertise for high net worth individuals and owner-managed businesses in the UK and internationally.', icon: 'private', image: '/images/bg1.avif' },
 ]
 
 export const articles: Article[] = [

@@ -39,17 +39,23 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div>
                 <h3 className="small-title text-navy/70 mb-4">London</h3>
-                <p className="font-light">15 Farringdon Street<br />London EC4A 4AB</p>
+                <p className="font-light">20-22 Wenlock Road<br />London, England, N1 7GU</p>
               </div>
               <div>
                 <h3 className="small-title text-navy/70 mb-4">Email</h3>
-                <p className="font-light">hello@parametric-legal.com</p>
+                <p className="font-light">nfo@parametricglobal.co.uk</p>
               </div>
               <div>
                 <h3 className="small-title text-navy/70 mb-4">Telephone</h3>
-                <p className="font-light">+44 (0)20 7946 0958</p>
+                <p className="font-light">+44 (0)208 058 3120</p>
               </div>
-              <div className="h-64 bg-navy/10 mt-8" />
+              <iframe
+                title="Map showing 20-22 Wenlock Road, London, N1 7GU"
+                src="https://www.google.com/maps?q=20-22%20Wenlock%20Road%2C%20London%2C%20N1%207GU&output=embed"
+                className="mt-8 h-64 w-full border-0 bg-navy/10"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </AnimatedSection>
         </div>

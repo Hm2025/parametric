@@ -18,7 +18,7 @@ export default function NewsPage() {
 
   return (
     <>
-      <section className="relative min-h-[30vh] flex items-end pb-12 px-[var(--side-padding)] bg-navy">
+      <section className="relative -mt-[8rem] min-h-[30vh] flex items-end pb-12 px-[var(--side-padding)] bg-navy pt-[8rem]">
         <div className="max-w-content mx-auto w-full">
           <AnimatedSection>
             <h1 className="h1-display text-sand">News & Insights</h1>

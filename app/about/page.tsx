@@ -23,26 +23,27 @@ const values = [
 
 const differences = [
   {
-    title: 'Pro Bono',
+    title: 'We protect our objectivity as a condition of engagement.',
     paragraphs: [
-      'Parametric is committed to pro bono work and, in partnership with various charities, we dedicate some of our time to supporting those who could not otherwise afford to pay for legal advice and representation.',
-      'We have a particular interest in injunctive and anti-harassment applications in cases of forced marriage. Parametric Group also regularly acts pro bono for other lawyers in regulatory and disciplinary proceedings, most recently in a complex and sensitive judicial review.',
+      'No finding we produce and no recommendation we make is shaped by the outcome a client hopes for. Our value to the organisations we serve depends entirely on their ability to trust that our conclusions were reached without influence, and we structure every engagement to ensure that trust is warranted.',
     ],
   },
   {
-    title: 'Community access and social responsibility',
+    title: 'We hold our work to the standard of the people who will scrutinise it.',
     paragraphs: [
-      'We have a strong commitment to community access and inclusivity. We are committed to spending a proportion of our time helping those who would not otherwise be able to access legal support.',
-      'We are a significant contributor to Advocate, the organisation that provides free legal advice and representation to those in need, and our team are committed to fundraising to promote access to legal assistance in the community.',
-      'Above all, Parametric aims to promote access to and openness in the provision of expert advocacy and legal advice for all who need the promotion or protection of their rights.',
+      'Every investigation report, governance recommendation, and piece of strategic counsel we deliver is written and tested against the expectation that it will be read by a regulator, a board, a legal adviser, or the public. That standard governs how we gather evidence, how we analyse it, and how we present our conclusions.',
     ],
   },
   {
-    title: 'Social mobility',
+    title: 'We treat sensitivity as a professional discipline, not a courtesy.',
     paragraphs: [
-      'We promote access to the legal profession for those who have the ability, but do not have the opportunity. We work with charitable providers to promote funded opportunities to state school students to come to London and experience a career in the law. These range from funded internships to informal work experience, mentoring, personal statement and CV advice, and interview training.',
-      'We believe lack of social mobility is the biggest impediment to wider diversity in the legal profession. Our responsibility to promote it sits alongside our commitment never to discriminate on grounds of race, gender, sexual orientation, age, disability or regional, social and economic background.',
-      'The Parametric team is consequently diverse. It is above all energised, committed and enthusiastic.',
+      'The matters our clients bring to us carry reputational, legal, and personal consequences for the individuals and organisations involved. Our handling of every communication, every document, and every finding reflects that reality at every stage of the engagement.',
+    ],
+  },
+  {
+    title: 'We deliver advice people can act on.',
+    paragraphs: [
+      'Complexity is the starting condition of every engagement we accept. Our obligation is to reduce that complexity to a set of conclusions and recommendations that leadership can understand, defend, and implement. Advice that is technically sound but practically unusable has not met the standard.',
     ],
   },
 ]
@@ -51,7 +52,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-[70vh] overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-[78vh] lg:pt-[8rem]">
-        <Image src="/images/bg1.avif" alt="Parametric office interior" fill priority className="object-cover opacity-55" />
+        <Image src="/images/bg1-1.avif" alt="Parametric office interior" fill priority className="object-cover opacity-55" />
         <div className="absolute inset-0 bg-navy/60" />
         <div className="relative z-10 mx-auto flex min-h-[58vh] max-w-content items-end pb-16 lg:pb-24">
           <AnimatedSection>
@@ -60,20 +61,58 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section-padding bg-sand text-navy pt-16 lg:pt-24">
+        <div className="mx-auto max-w-content">
+          <AnimatedSection>
+            <div className="border-t border-navy/25 pt-8 lg:pt-10">
+              <p className="small-title mb-12 font-bold text-navy lg:mb-20">Our Purpose</p>
+              <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+                <div className="border-t border-navy/25 pt-6">
+                  <h2 className="h2-display mb-6 font-bold text-navy">Our Mission</h2>
+                  <p className="max-w-2xl text-xl font-light leading-relaxed text-navy/80 lg:text-2xl">We help organizations move from uncertainty to informed action through investigation, intelligence, governance, and strategic advisory that establishes credible facts and supports decisions capable of withstanding scrutiny from every direction.</p>
+                </div>
+                <div className="border-t border-navy/25 pt-6">
+                  <h2 className="h2-display mb-6 font-bold text-navy">Our Vision</h2>
+                  <p className="max-w-2xl text-xl font-light leading-relaxed text-navy/80 lg:text-2xl">To be the firm that organizations and their advisers engage first when judgment is being tested, recognized across sectors and jurisdictions for the independence of our findings, the rigor of our process, and the clarity of our counsel.</p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <section className="section-padding bg-extra-light-gray text-navy">
         <div className="mx-auto max-w-content border-t border-navy/25 pt-8 lg:pt-10">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20">
-            <AnimatedSection><h2 className="small-title text-navy/65">Trusted Partners</h2></AnimatedSection>
-            <AnimatedSection delay={0.15}>
-              <p className="h2-display max-w-4xl">Parametric is a values-based organisation, committed to diversity, quality and a relentless focus on outcomes. We aim to be trusted partners to our clients, and to provide access and support to the next generation of professionals, irrespective of their backgrounds.</p>
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
+            <AnimatedSection>
+              <p className="h2-display max-w-4xl text-justify">Parametric GC was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.</p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <p className="h2-display max-w-4xl text-justify">The firm is deliberately structured to remain close to the work. Every engagement is led by senior professionals who are directly involved from instruction through to deliverable, which means the experience and judgment a client is promised at the outset is the experience and judgment they receive throughout. This structure is a choice, and it is one the firm has protected as it has grown, because the quality of investigative and advisory work depends on the people doing it, not the brand sitting above them.</p>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-navy text-sand">
+      <section className="section-padding bg-navy pt-16 text-sand lg:pt-24">
         <div className="mx-auto max-w-content">
-          <AnimatedSection><h2 className="small-title mb-12 border-b border-white/20 pb-4 text-sand/70 lg:mb-20">Our Values</h2></AnimatedSection>
+          <div className="grid gap-12 border-t border-white/20 pt-8 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20 lg:pt-10">
+            <AnimatedSection>
+              <p className="small-title mb-8 font-bold text-sand/70 lg:mb-12">Certified status</p>
+              <h2 className="h1-display max-w-xl text-sand">Certified Women&apos;s Business Enterprise</h2>
+            </AnimatedSection>
+            <AnimatedSection delay={0.12}>
+              <div className="border-t border-gold pt-6 lg:pt-8">
+                <p className="max-w-3xl text-xl font-light leading-relaxed text-sand/90 lg:text-2xl">Parametric GC holds certified Women&apos;s Business Enterprise status, a designation that is independently verified and recognized by procurement and supplier diversity programs across the public sector, international development agencies, and multinational corporations. For organizations with supplier diversity commitments or procurement frameworks that prioritize certified businesses, this means Parametric GC can be engaged through those channels without additional qualification steps. The certification reflects how the firm was founded and how it continues to operate, and it provides a practical advantage for clients whose procurement processes require or favor certified suppliers.</p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-navy text-sand pt-16 lg:pt-24">
+        <div className="mx-auto max-w-content">
+          <AnimatedSection><h2 className="small-title mb-12 border-b border-white/20 pb-4 font-bold text-sand lg:mb-20">Our Values</h2></AnimatedSection>
           <div className="grid gap-x-12 gap-y-14 md:grid-cols-2">
             {values.map((value, index) => (
               <AnimatedSection key={value.title} delay={index * 0.08} className="border-t border-white/20 pt-6">
@@ -86,13 +125,13 @@ export default function AboutPage() {
       </section>
 
       <section className="section-padding bg-white text-navy">
-        <div className="mx-auto max-w-content">
-          <AnimatedSection><h2 className="small-title mb-12 border-b border-navy/25 pb-4 text-navy/70 lg:mb-20">Parametric Difference</h2></AnimatedSection>
+        <div className="mx-auto max-w-content pt-8 lg:pt-10">
+          <AnimatedSection><h2 className="small-title mb-12 border-b border-navy/25 pb-4 font-bold text-navy lg:mb-20">What We Stand For</h2></AnimatedSection>
           <div className="space-y-20 lg:space-y-28">
             {differences.map((difference, index) => (
               <AnimatedSection key={difference.title} delay={index * 0.08}>
                 <div className="grid gap-8 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20">
-                  <h3 className="h2-display text-navy">{difference.title}</h3>
+                  <h3 className="h2-display font-bold text-navy">{difference.title}</h3>
                   <div className="max-w-3xl space-y-6 font-light leading-relaxed text-navy/80">
                     {difference.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                   </div>
@@ -101,7 +140,7 @@ export default function AboutPage() {
             ))}
           </div>
           <AnimatedSection className="mt-20 border-t border-navy/25 pt-8">
-            <Link href="/contact" className="button-primary border-navy/50 text-navy hover:border-navy">Start a conversation <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" /></Link>
+            <Link href="/contact" className="button-primary border-navy/50 text-navy hover:border-navy">Speak with our team <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" /></Link>
           </AnimatedSection>
         </div>
       </section>
