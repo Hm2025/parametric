@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-[82vh] lg:-mt-[8rem] lg:min-h-[82vh] overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:pt-[8rem]">
-        <Image src="/images/bg1.avif" alt="Parametric office interior" fill priority className="object-cover opacity-60" />
+        <Image src="/images/Hero Picture.png" alt="Parametric office interior" fill priority className="object-cover opacity-60" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 mx-auto grid min-h-[70vh] max-w-content items-center gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-40">
           <AnimatedSection className="lg:pt-8">
