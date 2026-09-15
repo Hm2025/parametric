@@ -26,7 +26,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-sand text-navy">
+      <section className="section-padding bg-sand pt-16 text-navy lg:pt-24">
         <div className="mx-auto max-w-content">
           <div className="mb-10 flex flex-wrap gap-5 border-b border-navy/20 pb-4">
             {tabs.map((tab) => (

@@ -40,20 +40,28 @@ export default function ExpertiseIndexPage() {
             <AnimatedSection className="mb-14 max-w-4xl lg:mb-20">
               <p className="h2-display text-white">Parametric GC works across four interconnected disciplines that together allow organisations to move from uncertainty to informed, defensible action. Each discipline can be engaged independently, and each is strengthened by the insight the others provide.</p>
             </AnimatedSection>
-            <div className="grid gap-x-6 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
-              {primaryServices.map((service, index) => (
-                <AnimatedSection key={service.slug} delay={index * 0.06}>
-                  <Link href={`/expertise/${service.slug}`} className="group flex h-full flex-col border-l border-[var(--border-color)] pl-6">
-                    <div className="relative mb-7 h-44 overflow-hidden bg-sand/10 lg:h-52"><Image src={service.image} alt="" fill className="object-cover opacity-45 transition duration-700 group-hover:scale-105 group-hover:opacity-75" /></div>
-                    <h3 className="small-title mb-4 text-gold transition-colors group-hover:text-white">{service.title}</h3>
-                    <p className="mb-5 flex-1 text-sm leading-relaxed opacity-70 transition-opacity group-hover:opacity-100">{service.description}</p>
-                    <span className="small-title inline-flex items-center gap-3 text-gold transition-colors group-hover:text-white">
-                      Find out more
-                      <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
-                    </span>
-                  </Link>
-                </AnimatedSection>
-              ))}
+            <div className="relative">
+              <div className="absolute left-5 top-5 hidden h-px w-[calc(100%-2.5rem)] bg-white/20 lg:block" />
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+                {primaryServices.map((service, index) => (
+                  <AnimatedSection key={service.slug} delay={index * 0.08} className="relative">
+                    <details className="group relative z-10 flex min-h-[330px] flex-col border border-white/20 bg-white/[0.03] transition-colors open:border-gold/70 open:bg-white/[0.07] hover:border-gold/70 hover:bg-white/[0.07]">
+                      <div className="relative h-24 overflow-hidden border-b border-white/15 bg-white/10 sm:h-28"><Image src={service.image} alt="" fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-90" /></div>
+                      <summary className="flex min-h-36 cursor-pointer list-none flex-col justify-between p-5 [&::-webkit-details-marker]:hidden sm:min-h-44 sm:p-6">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold text-xs text-gold transition-colors group-hover:bg-gold group-hover:text-white">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="mt-8 flex items-end justify-between gap-4 text-xl leading-tight text-white">{service.title}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/30 text-lg font-light leading-none text-gold transition-transform group-hover:rotate-45">+</span></span>
+                      </summary>
+                      <div className="hidden border-t border-white/15 px-5 pb-6 pt-5 group-hover:block sm:px-6">
+                        <p className="line-clamp-3 text-sm font-light leading-relaxed text-white/70">{service.description}</p>
+                        <Link href={`/expertise/${service.slug}`} className="small-title mt-5 inline-flex items-center gap-3 text-gold">
+                          Find out more
+                          <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
+                        </Link>
+                      </div>
+                    </details>
+                  </AnimatedSection>
+                ))}
+              </div>
             </div>
           </div>
         </div>

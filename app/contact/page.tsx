@@ -11,8 +11,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-sand text-navy">
-        <div className="max-w-content mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <section className="section-padding bg-sand pb-0 pt-16 text-navy lg:pt-24">
+        <div className="max-w-content mx-auto">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <AnimatedSection>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -43,21 +44,22 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="small-title text-navy/70 mb-4">Email</h3>
-                <p className="font-light">nfo@parametricglobal.co.uk</p>
+                <p className="font-light">info@parametricglobal.co.uk</p>
               </div>
               <div>
                 <h3 className="small-title text-navy/70 mb-4">Telephone</h3>
                 <p className="font-light">+44 (0)208 058 3120</p>
               </div>
-              <iframe
-                title="Map showing 20-22 Wenlock Road, London, N1 7GU"
-                src="https://www.google.com/maps?q=20-22%20Wenlock%20Road%2C%20London%2C%20N1%207GU&output=embed"
-                className="mt-8 h-64 w-full border-0 bg-navy/10"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
             </div>
           </AnimatedSection>
+          </div>
+          <iframe
+            title="Map showing 20-22 Wenlock Road, London, N1 7GU"
+            src="https://www.google.com/maps?q=20-22%20Wenlock%20Road%2C%20London%2C%20N1%207GU&output=embed"
+            className="relative left-1/2 mt-12 h-80 w-screen -translate-x-1/2 border-0 bg-navy/10 lg:mt-16 lg:h-96"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </section>
     </>

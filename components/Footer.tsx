@@ -58,9 +58,9 @@ export default function Footer() {
         <div className="mt-16 pt-6 border-t border-[var(--border-color)] flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 text-xs uppercase tracking-wider opacity-70">
           <p>Designed by Parametric GC</p>
           <div className="flex flex-wrap gap-6">
-            {legalPages.map((p) => (
-              <Link key={p.slug} href={`/legal/${p.slug}`} className="text-white hover:text-white transition-colors">{p.title}</Link>
-            ))}
+              {legalPages.map((p) => (
+                <span key={p.slug} className="text-white">{p.title}</span>
+              ))}
           </div>
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
           </div>
         </section>
 
-        <section className="section-padding bg-extra-light-gray text-navy">
+        <section className="section-padding bg-extra-light-gray pt-16 text-navy lg:pt-24">
           <div className="mx-auto max-w-content">
             <AnimatedSection>
               <div className="mb-12 border-b border-navy/20 pb-4">
@@ -87,9 +87,9 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection delay={0.15} className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+              <AnimatedSection delay={0.15} className="grid items-start gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
                 <div className="space-y-6 font-light text-base leading-relaxed">
-                  <p className="h2-display !text-[1.85rem] !leading-[1.2] max-w-[26rem]">
+                  <p className="h2-display max-w-[26rem] font-medium !text-[1.85rem] !leading-[1.2]">
                     When an allegation of fraud, corruption, money laundering, or other form of economic crime comes to light, the credibility of the organization&apos;s response is as important as the substance of that response. Parametric GC conducts investigations that are independent by design and defensible by the standard to which they are held, establishing facts through evidence rather than assumption and delivering findings that withstand internal, regulatory, and legal examination.
                   </p>
                 </div>
@@ -106,7 +106,7 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
           </div>
         </section>
 
-        <section className="section-padding bg-navy text-white">
+        <section className="section-padding bg-navy pt-24 text-white lg:pt-32">
           <div className="mx-auto max-w-content">
             <AnimatedSection>
               <div className="mb-12 border-b border-white/20 pb-4">
@@ -156,7 +156,7 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      <section className="section-padding bg-sand text-navy">
+      <section className="section-padding bg-sand pt-16 text-navy lg:pt-24">
         <div className="mx-auto max-w-content">
           <div className="space-y-12 lg:space-y-16">
             <AnimatedSection>
@@ -165,9 +165,9 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.15} className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+            <AnimatedSection delay={0.15} className="grid items-start gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
               <div className="space-y-6 font-light text-base leading-relaxed">
-                <p className="h2-display !text-[1.85rem] !leading-[1.2] max-w-[26rem]">{pageContent?.paragraphs[0] || service.shortDesc}</p>
+                <p className="h2-display max-w-[26rem] font-medium !text-[1.85rem] !leading-[1.2]">{pageContent?.paragraphs[0] || service.shortDesc}</p>
               </div>
               <div className="space-y-6 font-light text-base leading-relaxed">
                 {(pageContent?.paragraphs.slice(1) || [
@@ -181,10 +181,12 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-        <section className="section-padding bg-navy text-white">
+      <section className="section-padding bg-navy pt-24 text-white lg:pt-32">
         <div className="max-w-content mx-auto">
           <AnimatedSection>
-            <h2 className="small-title mb-12 border-b border-white/20 pb-4 font-bold text-white">Areas of Focus</h2>
+            <div className="mb-12 border-b border-white/20 pb-4">
+              <p className="small-title text-white/70">Our Focus Areas</p>
+            </div>
           </AnimatedSection>
           <div className="grid gap-8 lg:grid-cols-2">
             {investigationFocusAreas.map((area, index) => (
@@ -197,11 +199,18 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
             ))}
           </div>
 
-          <AnimatedSection className="mt-16 border-t border-white/20 pt-8">
-            <Link href="/contact" className="button-primary border-white/40 text-white hover:border-white">
-              Contact us
-              <span className="inline-block w-2 h-2 border-r border-t border-current transform rotate-45 ml-2" />
-            </Link>
+        </div>
+      </section>
+
+      <section className="section-padding bg-white text-navy">
+        <div className="mx-auto max-w-content">
+          <AnimatedSection>
+            <div className="border-t border-navy/20 pt-8">
+              <Link href="/contact" className="button-primary border-navy bg-navy text-white hover:border-navy">
+                Get in touch
+                <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>

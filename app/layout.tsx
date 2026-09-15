@@ -19,6 +19,9 @@ const effra = localFont({
 export const metadata: Metadata = {
   title: 'Parametric — Legal & Professional Services',
   description: 'A premium law firm providing corporate, dispute resolution, finance, and private client services.',
+  icons: {
+    icon: '/images/Parametric Logo/PNG/Parametric Logo on Purple.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${effra.variable} antialiased`}>
         <Header />
-        <main className="pt-[6rem] lg:pt-[8rem]">{children}</main>
+        <main className="pt-[5.5rem] lg:pt-[6.5rem]">{children}</main>
         <Footer />
       </body>
     </html>
