@@ -149,7 +149,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed bottom-0 left-0 right-0 top-[6.5rem] z-40 overflow-y-auto bg-navy transition-transform duration-700 ease-[cubic-bezier(.215,.61,.355,1)] lg:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed inset-x-0 top-0 z-40 h-[100dvh] overflow-y-auto bg-navy pt-[6.5rem] transition-transform duration-700 ease-[cubic-bezier(.215,.61,.355,1)] lg:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="px-[var(--side-padding)] pb-10 pt-8">
           <div className="border-t border-[var(--border-color)]" />
           <nav className="flex flex-col">
