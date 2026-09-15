@@ -9,9 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         navy: '#240237',
-        gold: '#240237',
-        sand: '#ffffff',
-        'light-gray': '#240237',
+        gold: '#FF9933',
+        sand: '#FFF7E6',
+        'light-gray': '#3E075E',
         'extra-light-gray': '#ffffff',
       },
       fontFamily: {

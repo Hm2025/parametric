@@ -36,7 +36,7 @@ export default function Home() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="max-w-sm text-base font-light leading-relaxed text-sand/90 lg:text-lg">
-              Parametric GC is a specialist investigations, intelligence, governance, and strategic advisory firm. We partner with organizations and their advisers to establish facts, reduce uncertainty, and provide the clarity that allows leadership to act with confidence when the consequences of a decision will endure long after the decision itself has been made.
+              ParametricGC is a specialist investigations, intelligence, governance, and strategic advisory firm. We partner with organizations and their advisers to establish facts, reduce uncertainty, and provide the clarity that allows leadership to act with confidence when the consequences of a decision will endure long after the decision itself has been made.
             </p>
           </AnimatedSection>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-6 font-light">
                   <p>It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.</p>
-                  <p>This is the space in which Parametric GC operates, and it is the standard to which every engagement we undertake is held.</p>
+                  <p>This is the space in which ParametricGC operates, and it is the standard to which every engagement we undertake is held.</p>
                 </div>
               </div>
               <Link href="/people" className="button-primary mt-10 border-navy/40 text-navy hover:border-navy">Speak with our team to discuss your requirements. <Arrow /></Link>
@@ -65,24 +65,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-navy pt-8 lg:pt-10">
+      <section className="section-padding bg-[#3E075E] pt-8 lg:pt-10">
         <div className="mx-auto max-w-content">
           <div className="grid gap-12 border-t border-[var(--border-color)] pt-8 lg:grid-cols-[0.72fr_1.6fr] lg:gap-20 lg:pt-10">
             <AnimatedSection>
-              <p className="small-title mb-6 text-gold">Services</p>
+              <p className="small-title mb-6 text-white">Services</p>
               <h2 className="h2-display max-w-sm text-white">Expertise for consequential decisions.</h2>
             </AnimatedSection>
 
             <div className="relative">
-              <div className="absolute left-5 top-5 hidden h-px w-[calc(100%-2.5rem)] bg-white/20 lg:block" />
+              <div className="absolute left-5 top-5 hidden h-px w-[calc(100%-2.5rem)] bg-[#FF9933]/50 lg:block" />
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
                 {expertise.slice(0, 4).map((item, index) => (
                   <AnimatedSection key={item.slug} delay={index * 0.08} className="relative">
-                    <details className="group relative z-10 flex min-h-[330px] flex-col border border-white/20 bg-white/[0.03] transition-colors open:border-gold/70 open:bg-white/[0.07] hover:border-gold/70 hover:bg-white/[0.07]">
+                    <details className="group relative z-10 flex min-h-[330px] flex-col border border-[#FF9933]/40 bg-[#6B0CA3]/20 transition-colors open:border-[#FF9933] open:bg-[#6B0CA3]/35 hover:border-[#FF9933] hover:bg-[#6B0CA3]/35">
                       <div className="relative h-24 overflow-hidden border-b border-white/15 bg-white/10 sm:h-28"><Image src={item.slug === 'special-situations-advisory' ? '/images/Impartial-Investigation-1.webp' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-90" /></div>
                       <summary className="flex min-h-36 cursor-pointer list-none flex-col justify-between p-5 [&::-webkit-details-marker]:hidden sm:min-h-44 sm:p-6">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold text-xs text-gold transition-colors group-hover:bg-gold group-hover:text-white">{String(index + 1).padStart(2, '0')}</span>
-                        <span className="mt-8 flex items-end justify-between gap-4 text-xl leading-tight text-white">{item.title}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/30 text-lg font-light leading-none text-gold transition-transform group-hover:rotate-45">+</span></span>
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF9933] text-xs text-[#FF9933] transition-colors group-hover:bg-[#FF9933] group-hover:text-[#240237]">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="mt-8 flex items-end justify-between gap-4 text-xl leading-tight text-white">{item.title}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/30 text-lg font-light leading-none text-[#FF9933] transition-transform group-hover:rotate-45">+</span></span>
                       </summary>
                       <div className="hidden border-t border-white/15 px-5 pb-6 pt-5 group-hover:block sm:px-6">
                         <p className="line-clamp-3 text-sm font-light leading-relaxed text-white/70">{item.description}</p>

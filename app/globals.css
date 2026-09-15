@@ -5,10 +5,10 @@
 :root {
   --black: #000;
   --white: #fff;
-  --gold: #240237;
+  --gold: #FF9933;
   --navy: #240237;
-  --sand: #fff;
-  --light-gray: #240237;
+  --sand: #FFF7E6;
+  --light-gray: #3E075E;
   --extra-light-gray: #fff;
   --border-color: rgba(36, 2, 55, 0.2);
   --text-color: var(--navy);
@@ -46,14 +46,14 @@ body {
   .section-padding {
     padding-left: var(--side-padding);
     padding-right: var(--side-padding);
+    padding-top: var(--section-spacing);
     padding-bottom: var(--section-spacing);
   }
 
   .text-gold { color: var(--gold); }
-  .border-gold { border-color: var(--border-color); }
+  .border-gold { border-color: var(--gold); }
 
   .bg-navy { color: var(--white); }
-  .bg-navy .text-gold,
   .bg-navy .text-navy { color: var(--white); }
 
   .small-title {

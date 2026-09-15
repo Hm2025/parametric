@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-content border-t border-navy/25 pt-8 lg:pt-10">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
             <AnimatedSection>
-              <p className="h2-display max-w-4xl text-justify">Parametric GC was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.</p>
+              <p className="h2-display max-w-4xl text-justify">ParametricGC was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.</p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <p className="h2-display max-w-4xl text-justify">The firm is deliberately structured to remain close to the work. Every engagement is led by senior professionals who are directly involved from instruction through to deliverable, which means the experience and judgment a client is promised at the outset is the experience and judgment they receive throughout. This structure is a choice, and it is one the firm has protected as it has grown, because the quality of investigative and advisory work depends on the people doing it, not the brand sitting above them.</p>
@@ -103,21 +103,21 @@ export default function AboutPage() {
             </AnimatedSection>
             <AnimatedSection delay={0.12}>
               <div className="border-t border-gold pt-6 lg:pt-8">
-                <p className="max-w-3xl text-xl font-light leading-relaxed text-sand/90 lg:text-2xl">Parametric GC holds certified Women&apos;s Business Enterprise status, a designation that is independently verified and recognized by procurement and supplier diversity programs across the public sector, international development agencies, and multinational corporations. For organizations with supplier diversity commitments or procurement frameworks that prioritize certified businesses, this means Parametric GC can be engaged through those channels without additional qualification steps. The certification reflects how the firm was founded and how it continues to operate, and it provides a practical advantage for clients whose procurement processes require or favor certified suppliers.</p>
+                <p className="max-w-3xl text-xl font-light leading-relaxed text-sand/90 lg:text-2xl">ParametricGC holds certified Women&apos;s Business Enterprise status, a designation that is independently verified and recognized by procurement and supplier diversity programs across the public sector, international development agencies, and multinational corporations. For organizations with supplier diversity commitments or procurement frameworks that prioritize certified businesses, this means ParametricGC can be engaged through those channels without additional qualification steps. The certification reflects how the firm was founded and how it continues to operate, and it provides a practical advantage for clients whose procurement processes require or favor certified suppliers.</p>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-navy text-sand pt-16 lg:pt-24">
+      <section className="section-padding bg-sand text-navy pt-16 lg:pt-24">
         <div className="mx-auto max-w-content">
-          <AnimatedSection><h2 className="small-title mb-12 border-b border-white/20 pb-4 font-bold text-sand lg:mb-20">Our Values</h2></AnimatedSection>
+          <AnimatedSection><h2 className="small-title mb-12 border-b border-navy/25 pb-4 font-bold text-navy lg:mb-20">Our Values</h2></AnimatedSection>
           <div className="grid gap-x-12 gap-y-14 md:grid-cols-2">
             {values.map((value, index) => (
-              <AnimatedSection key={value.title} delay={index * 0.08} className="border-t border-white/20 pt-6">
-                <h3 className="h2-display mb-5 text-sand">{value.title}</h3>
-                <p className="max-w-xl font-light leading-relaxed text-sand/80">{value.description}</p>
+              <AnimatedSection key={value.title} delay={index * 0.08} className="border-t border-navy/20 pt-6">
+                <h3 className="h2-display mb-5 text-navy">{value.title}</h3>
+                <p className="max-w-xl font-light leading-relaxed text-navy/75">{value.description}</p>
               </AnimatedSection>
             ))}
           </div>

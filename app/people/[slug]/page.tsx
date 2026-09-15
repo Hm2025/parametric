@@ -46,7 +46,7 @@ export default function PersonProfilePage({ params }: { params: { slug: string }
             <p className="small-title font-bold text-navy/60">Biography</p>
             <div className="space-y-6 text-base font-light leading-relaxed text-navy/80">
               <p>{person.biography || person.description}</p>
-              <p>Parametric GC brings together senior professionals who establish credible facts, reduce uncertainty, and provide clear counsel for decisions that must withstand scrutiny.</p>
+              <p>ParametricGC brings together senior professionals who establish credible facts, reduce uncertainty, and provide clear counsel for decisions that must withstand scrutiny.</p>
             </div>
           </div>
         </div>

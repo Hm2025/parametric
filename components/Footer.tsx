@@ -56,7 +56,7 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="mt-16 pt-6 border-t border-[var(--border-color)] flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 text-xs uppercase tracking-wider opacity-70">
-          <p>Designed by Parametric GC</p>
+          <p>Designed by ParametricGC</p>
           <div className="flex flex-wrap gap-6">
               {legalPages.map((p) => (
                 <span key={p.slug} className="text-white">{p.title}</span>
