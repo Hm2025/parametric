@@ -31,11 +31,11 @@ export default function PeoplePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {people.slice(0, 6).map((member, index) => (
               <AnimatedSection key={member.slug} delay={index * 0.05} className="group">
-                <Link href={`/people/${member.slug}`} className="block rounded-[1.25rem] border-[0.7rem] border-navy/20 bg-white transition-transform duration-300 hover:-translate-y-1">
-                  <div className="relative aspect-[5/6] overflow-hidden rounded-[0.9rem] bg-navy/10">
-                    <Image src={member.image} alt={member.name} fill className="object-cover object-top transition duration-700 group-hover:scale-105" />
+                <Link href={`/people/${member.slug}`} className="block rounded-[1.25rem] border-[0.45rem] border-navy/20 bg-white transition-transform duration-300 hover:-translate-y-1">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[0.9rem] bg-navy/10">
+                    <Image src={member.image} alt={member.name} fill className="object-contain object-top transition duration-700 group-hover:scale-105" />
                   </div>
-                  <div className="flex min-h-[5.5rem] items-center justify-between gap-3 px-3 py-4 sm:px-4">
+                  <div className="flex min-h-[4.5rem] items-center justify-between gap-3 px-3 py-3 sm:px-4">
                     <div>
                       <h3 className="text-base font-medium leading-tight text-navy">{member.name}</h3>
                       <p className="mt-1 text-sm text-navy/60">{member.title}</p>
