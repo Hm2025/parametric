@@ -16,6 +16,14 @@ export default function Header() {
     setMegaOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
   const navLinks = [
     { label: 'Our Services', href: '/expertise', hasMega: true },
     { label: 'About', href: '/about' },
@@ -127,9 +135,11 @@ export default function Header() {
 
           {/* Mobile Toggle */}
           <button
+            type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden relative z-10 w-6 h-5 flex flex-col justify-between text-white"
-            aria-label="Toggle menu"
+            className="relative z-50 flex h-5 w-6 flex-col justify-between text-white lg:hidden"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
           >
             <span className={`w-full h-px bg-current transition-transform ${menuOpen ? 'translate-y-[9px] rotate-45' : ''}`} />
             <span className={`w-full h-px bg-current transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
@@ -139,8 +149,8 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden fixed inset-0 bg-navy z-40 transition-transform duration-700 ease-[cubic-bezier(.215,.61,.355,1)] ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="pt-28 px-[var(--side-padding)]">
+      <div className={`fixed bottom-0 left-0 right-0 top-[6.5rem] z-40 overflow-y-auto bg-navy transition-transform duration-700 ease-[cubic-bezier(.215,.61,.355,1)] lg:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="px-[var(--side-padding)] pb-10 pt-8">
           <div className="border-t border-[var(--border-color)]" />
           <nav className="flex flex-col">
             {navLinks.map((link) => (
