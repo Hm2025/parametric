@@ -12,7 +12,8 @@ export default function Footer() {
             <ul className="flex flex-col gap-4 text-sm uppercase tracking-wider">
               <li><Link href="/about" className="text-white hover:text-white transition-colors">About</Link></li>
               <li><Link href="/people" className="text-white hover:text-white transition-colors">Our Team</Link></li>
-              <li><Link href="/news" className="text-white hover:text-white transition-colors">News & Insights</Link></li>
+              <li><Link href="/news" className="text-white hover:text-white transition-colors">News & Briefings</Link></li>
+              <li><Link href="/podcast" className="text-white hover:text-white transition-colors">Podcast</Link></li>
               <li><Link href="/contact" className="text-white hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>

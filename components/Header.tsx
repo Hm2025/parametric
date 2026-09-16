@@ -29,6 +29,7 @@ export default function Header() {
     { label: 'About', href: '/about' },
     { label: 'Our Team', href: '/people' },
     { label: 'News & Briefings', href: '/news' },
+    { label: 'Podcast', href: '/podcast' },
     { label: 'Contact Us', href: '/contact' },
   ]
 
