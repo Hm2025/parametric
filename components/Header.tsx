@@ -28,7 +28,7 @@ export default function Header() {
     { label: 'Our Services', href: '/expertise', hasMega: true },
     { label: 'About', href: '/about' },
     { label: 'Our Team', href: '/people' },
-    { label: 'News & Insights', href: '/news' },
+    { label: 'News & Briefings', href: '/news' },
     { label: 'Contact Us', href: '/contact' },
   ]
 
@@ -38,12 +38,12 @@ export default function Header() {
   }))
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm transition-transform duration-500 ease-smooth">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-transform duration-500 ease-smooth">
       <div className="mx-auto max-w-content px-[var(--side-padding)]">
-        <div className="flex items-center justify-between border-b border-[var(--border-color)] py-6">
+        <div className="flex items-center justify-between border-b border-navy/15 py-6">
           <Link href="/" className="relative z-10">
             <Image
-              src="/images/Parametric%20Logo%20on%20Purple.png"
+              src="/images/Parametric%20Logo%20on%20White.png"
               alt="Parametric"
               width={158}
               height={36}
@@ -63,7 +63,7 @@ export default function Header() {
                   <div className="flex items-center">
                     <Link
                       href={link.href}
-                      className="small-title relative -mx-8 block px-8 py-5 text-white transition-colors hover:text-white"
+                      className="small-title relative -mx-8 block px-8 py-5 text-navy transition-colors hover:text-gold"
                     >
                       {link.label}
                     </Link>
@@ -71,7 +71,7 @@ export default function Header() {
                       type="button"
                       aria-label="Toggle services menu"
                       onClick={() => setMegaOpen((value) => !value)}
-                      className="relative -ml-5 p-3 text-white transition-colors hover:text-white"
+                      className="relative -ml-5 p-3 text-navy transition-colors hover:text-gold"
                     >
                       <span className="relative -top-0.5 inline-block h-[0.45em] w-[0.45em] rotate-[135deg] border-r border-t border-current" />
                     </button>
@@ -79,7 +79,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={link.href}
-                    className="small-title relative -mx-8 block px-8 py-5 text-white transition-colors hover:text-white"
+                    className="small-title relative -mx-8 block px-8 py-5 text-navy transition-colors hover:text-gold"
                   >
                     {link.label}
                   </Link>
@@ -137,7 +137,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="relative z-50 flex h-5 w-6 flex-col justify-between text-white lg:hidden"
+            className="relative z-50 flex h-5 w-6 flex-col justify-between text-navy lg:hidden"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
           >
@@ -149,15 +149,15 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-x-0 top-0 z-40 h-[100dvh] overflow-y-auto bg-navy pt-[6.5rem] transition-transform duration-700 ease-[cubic-bezier(.215,.61,.355,1)] lg:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed inset-x-0 top-0 z-40 h-[100dvh] overflow-y-auto bg-white pt-[6.5rem] transition-transform duration-700 ease-[cubic-bezier(.215,.61,.355,1)] lg:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="px-[var(--side-padding)] pb-10 pt-8">
-          <div className="border-t border-[var(--border-color)]" />
+          <div className="border-t border-navy/15" />
           <nav className="flex flex-col">
             {navLinks.map((link) => (
-              <div key={link.label} className="border-b border-[var(--border-color)]">
+              <div key={link.label} className="border-b border-navy/15">
                 <Link
                   href={link.href}
-                  className="flex justify-between items-center py-5 text-white uppercase text-lg"
+                  className="flex justify-between items-center py-5 text-navy uppercase text-lg transition-colors hover:text-gold"
                   onClick={() => !link.hasMega && setMenuOpen(false)}
                 >
                   {link.label}
@@ -171,7 +171,7 @@ export default function Header() {
                       <Link
                         key={s.slug}
                         href={`/expertise/${s.slug}`}
-                        className="text-white/80 uppercase text-sm py-1"
+                        className="text-navy/70 uppercase text-sm py-1 transition-colors hover:text-gold"
                         onClick={() => setMenuOpen(false)}
                       >
                         {s.title}
