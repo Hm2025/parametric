@@ -4,16 +4,28 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import AnimatedSection from '@/components/AnimatedSection'
-import { articles } from '@/lib/data'
+import { allArticles } from '@/lib/data'
 
-const tabs = ['All', 'Insights', 'News', 'Podcasts'] as const
+const tabs = ['All', 'Briefings'] as const
+const textOnlyArticleSlugs = new Set([
+  'former-uk-prosecutor-don-t-get-caught-in-an-endless-cycle-of-internal-investigations',
+  'former-uk-prosecutor-does-your-organizational-culture-produce-brave-and-bold-employees',
+  'former-uk-prosecutor-six-ways-to-prepare-for-the-coming-surge-in-internal-investigations',
+  'the-uk-is-on-a-trajectory-is-toward-increased-corporate-criminal-liability',
+  'former-uk-prosecutor-four-things-investigators-can-learn-from-wirecard',
+  'former-uk-prosecutor-work-from-home-options-trigger-new-internal-compliance-concerns',
+  'former-uk-prosecutor-rebuilding-trust-should-be-at-the-heart-of-sfo-reforms',
+  'former-uk-prosecutor-the-art-of-cooperating-or-not-with-the-sfo',
+  'three-big-lessons-from-amec-foster-wheeler-s-uk-dpa',
+  'what-charges-against-former-mcdonald-s-ceo-can-teach-us-about-investigations-of-senior-officers',
+])
 
 export default function NewsPage() {
   const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>('All')
 
   const visibleArticles = useMemo(() => {
-    if (activeTab === 'All') return articles
-    return articles.filter((article) => article.category === activeTab)
+    if (activeTab === 'All') return allArticles
+    return allArticles.filter((article) => article.category === activeTab)
   }, [activeTab])
 
   return (
@@ -21,7 +33,7 @@ export default function NewsPage() {
       <section className="relative -mt-[8rem] min-h-[30vh] flex items-end pb-12 px-[var(--side-padding)] bg-navy pt-[8rem]">
         <div className="max-w-content mx-auto w-full">
           <AnimatedSection>
-            <h1 className="h1-display text-sand">News & Insights</h1>
+            <h1 className="h1-display text-sand">News & Briefings</h1>
           </AnimatedSection>
         </div>
       </section>
@@ -41,26 +53,26 @@ export default function NewsPage() {
             ))}
           </div>
 
-          <div className="space-y-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {visibleArticles.map((article, index) => (
               <AnimatedSection key={article.slug} delay={index * 0.04}>
-                <Link href={`/news/${article.slug}`} className="group block border-t border-navy/15 py-6 transition-colors hover:border-navy/30">
-                  <div className="grid gap-6 md:grid-cols-[10rem_1fr_12rem] md:items-start">
-                    <div className="small-title text-navy/60">{article.date}</div>
-
-                    <div className="space-y-3">
-                      <p className="small-title text-navy/60">{article.category}</p>
-                      <h3 className="h2-display max-w-3xl text-navy transition-colors group-hover:text-gold">{article.title}</h3>
-                      <p className="max-w-3xl text-base font-light leading-relaxed text-navy/80">{article.excerpt}</p>
-                      <span className="small-title inline-flex items-center gap-2 text-navy transition-colors group-hover:text-gold">
-                        Read article
-                        <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
-                      </span>
-                    </div>
-
-                    <div className="relative h-32 overflow-hidden border border-navy/10 bg-navy/5 md:h-28">
+                <Link href={`/news/${article.slug}`} className="group flex h-full flex-col rounded-[1.25rem] border-[0.45rem] border-navy/15 bg-white p-3 transition-transform duration-300 hover:-translate-y-1 sm:p-4">
+                  {!textOnlyArticleSlugs.has(article.slug) && (
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-[0.9rem] bg-navy/10">
                       <Image src={article.image} alt={article.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                     </div>
+                  )}
+                  <div className="flex flex-1 flex-col px-1 pb-2 pt-5 sm:px-2">
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                      <p className="small-title text-gold">{article.category}</p>
+                      <p className="small-title text-navy/50">{article.date}</p>
+                    </div>
+                    <h3 className="h2-display mb-4 text-navy transition-colors group-hover:text-gold">{article.title}</h3>
+                    <p className="mb-6 flex-1 text-sm leading-relaxed text-navy/70">{article.excerpt}</p>
+                    <span className="small-title inline-flex items-center gap-3 text-navy transition-colors group-hover:text-gold">
+                      Read more
+                      <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
+                    </span>
                   </div>
                 </Link>
               </AnimatedSection>

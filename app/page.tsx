@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import AnimatedSection from '@/components/AnimatedSection'
+import { allArticles } from '@/lib/data'
 
 const expertise = [
   { slug: 'special-situations-advisory', title: <>Investigations</>, description: 'We assess allegations of fraud, corruption, money laundering, and economic crime, protecting the credibility and integrity of the response.' },
@@ -11,13 +12,6 @@ const expertise = [
   { slug: 'fintech-and-digital-assets-advisory', title: <>Fintech and Digital<br />Assets Advisory</>, description: 'Advice on regulation, investigations, digital assets, and complex cryptocurrency disputes.' },
   { slug: 'civil-fraud', title: <>Civil<br />Fraud</>, description: 'Expertise in civil fraud-related investigations, litigation, asset tracing, and recovery.' },
   { slug: 'private-client-advisory', title: <>Private Client<br />Advisory</>, description: 'Specific expertise for high net worth individuals and owner-managed businesses in the UK and internationally.' },
-]
-
-const articles = [
-  { date: '23.07.2026', title: 'Directors, Dissent and Duty: Lessons from Saxon', description: 'Co-authored by Rob Bedford and Lisa McCreath' },
-  { date: '26.11.2025', title: 'From Stablecoins to Digital Bills of Exchange', description: 'Co-authored by James Ramsden KC, Dr Khrystyna Khanas and Dr Tetiana Dmytrenko.' },
-  { date: '05.11.2025', title: 'Carry on Litigating? Mazur and the Limits of Supervision', description: 'Few judgments have caused so much discussion in the legal professions in recent years.' },
-  { date: '04.11.2025', title: 'Non-Financial Misconduct: The Culture Reckoning Deepens', description: 'The market is still struggling to align conduct and culture.' },
 ]
 
 function Arrow() {
@@ -109,15 +103,15 @@ export default function Home() {
 
       <section className="section-padding bg-extra-light-gray pt-8 text-navy lg:pt-10">
         <div className="mx-auto max-w-content">
-          <AnimatedSection><h2 className="small-title mb-12 font-semibold text-navy">News &amp; Insights</h2></AnimatedSection>
+          <AnimatedSection><h2 className="small-title mb-12 font-semibold text-navy">News &amp; Briefings</h2></AnimatedSection>
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {articles.map((article, index) => (
-              <AnimatedSection key={article.title} delay={index * 0.08}>
-                <Link href="/news" className="group block">
-                  <div className="relative mb-6 h-44 overflow-hidden bg-navy/10"><Image src={index === 0 ? '/images/news1.avif' : index === 1 ? '/images/news2.avif' : index === 2 ? '/images/news3.avif' : '/images/Mask-group.avif'} alt="" fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105" /></div>
+            {allArticles.slice(0, 4).map((article, index) => (
+              <AnimatedSection key={article.slug} delay={index * 0.08}>
+                <Link href={`/news/${article.slug}`} className="group block">
+                  <div className="relative mb-6 h-44 overflow-hidden bg-navy/10"><Image src={article.image} alt={article.title} fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105" /></div>
                   <p className="small-title mb-4 text-navy/55">{article.date}</p>
                   <h3 className="h2-display mb-4 text-navy transition-colors group-hover:text-gold">{article.title}</h3>
-                  <p className="mb-5 text-sm leading-relaxed opacity-70">{article.description}</p>
+                  <p className="mb-5 text-sm leading-relaxed opacity-70">{article.excerpt}</p>
                   <span className="small-title inline-flex items-center gap-3 text-navy transition-colors group-hover:text-gold">Read article <Arrow /></span>
                 </Link>
               </AnimatedSection>

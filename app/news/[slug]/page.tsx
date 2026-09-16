@@ -2,14 +2,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AnimatedSection from '@/components/AnimatedSection'
-import { articles } from '@/lib/data'
+import { allArticles } from '@/lib/data'
 
 export function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }))
+  return allArticles.map((a) => ({ slug: a.slug }))
 }
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = articles.find((a) => a.slug === params.slug)
+  const article = allArticles.find((a) => a.slug === params.slug)
   if (!article) return notFound()
 
   return (
@@ -60,7 +60,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               <div className="rounded-none border border-navy/15 bg-white p-6">
                 <p className="small-title mb-4 text-navy/60">More insight</p>
                 <div className="space-y-6">
-                  {articles
+                  {allArticles
                     .filter((item) => item.slug !== article.slug)
                     .slice(0, 3)
                     .map((item) => (
