@@ -144,7 +144,7 @@ export default function Home() {
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 500,
                 fontStyle: 'normal',
-                fontSize: '50px',
+                fontSize: '48px',
                 lineHeight: '110%',
                 letterSpacing: '0.02em',
               }}>
