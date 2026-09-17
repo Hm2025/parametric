@@ -62,10 +62,10 @@ export default function Home() {
 
             <AnimatedSection delay={0.15}>
               <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
                   Every organization will eventually face a situation that tests its judgment in ways it did not anticipate, whether that takes the form of an allegation, a regulatory inquiry, financial misconduct, a governance failure, or risks that have embedded themselves within everyday operations without attracting attention until they surface under circumstances no one would have chosen.
                 </p>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '-12px 0 0', color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: '-12px 0 0', color: '#250238' }}>
                   What determines how an organization emerges from that moment is the quality of the decisions it makes while the uncertainty is
                 </p>
               </div>
@@ -73,10 +73,10 @@ export default function Home() {
 
             <AnimatedSection delay={0.2}>
               <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
                   It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.
                 </p>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '42px 0 0', color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: '18px 0 0', color: '#250238' }}>
                   This is the space in which ParametricGC operates, and it is the standard to which every engagement we undertake is held.
                 </p>
               </div>
@@ -112,11 +112,11 @@ export default function Home() {
                 <AnimatedSection key={item.slug} delay={index * 0.08} className="relative">
                   <div className="group relative flex h-full flex-col overflow-hidden bg-[#4A0B68] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(0,0,0,0.18)]" style={{ width: '100%', height: '100%' }}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#250238]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <div className="relative h-[185px] overflow-hidden bg-[#e6e0e8]">
+                    <div className="relative h-[200px] overflow-hidden bg-[#e6e0e8]">
                       <Image src={item.slug === 'special-situations-advisory' ? '/images/Governoces.png' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-500 group-hover:scale-105" />
                     </div>
 
-                    <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-5 pt-7 text-white transition-colors duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-6 sm:pt-8">
+                    <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-6 pt-8 text-white transition-colors duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-7 sm:pt-9">
                       <div>
                         <h3 className="mb-3 text-[clamp(1.4rem,1.5vw,2.1rem)] leading-[1.1] tracking-[-0.04em] transition-transform duration-300 group-hover:translate-x-0.5" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
                           {index === 0 ? 'Governance' : item.title}
