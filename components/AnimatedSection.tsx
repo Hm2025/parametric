@@ -18,7 +18,7 @@ export default function AnimatedSection({ children, className = '', delay = 0 }:
     <div
       ref={ref}
       className={`fade-in-up ${isVisible ? 'is-visible' : ''} ${className}`}
-      style={{ transitionDelay: `${delay}s` }}
+      style={{ transitionDelay: `${delay}s`, transitionDuration: '900ms' }}
     >
       {children}
     </div>

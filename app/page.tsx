@@ -22,11 +22,16 @@ export default function Home() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-screen overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-screen lg:pt-[8rem]">
-        <Image src="/images/c3cdcc347a312cf879d2aa9038953056a8f1be5b.png" alt="City skyscrapers" fill priority className="object-cover object-center opacity-90" />
-        <div className="absolute inset-0 bg-[#25023866]" />
+        <Image src="/images/c3cdcc347a312cf879d2aa9038953056a8f1be5b.png" alt="City skyscrapers" fill priority className="object-cover object-center opacity-90 scale-[1.08] motion-safe:animate-[slow-pan_20s_ease-in-out_infinite_alternate]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,153,51,0.18),_transparent_32%),linear-gradient(90deg,rgba(37,2,56,0.72),rgba(37,2,56,0.52),rgba(37,2,56,0.78))]" />
+        <div className="cloud cloud-one" />
+        <div className="cloud cloud-two" />
+        <div className="cloud cloud-three" />
+        <div className="hero-orb left-[-10%] top-[12%] h-72 w-72 bg-[#ff9b4d]/20 blur-3xl" />
+        <div className="hero-orb right-[-8%] bottom-[7%] h-80 w-80 bg-[#ffd5a2]/15 blur-3xl" />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-content items-center justify-center lg:min-h-[calc(100vh-8rem)]">
           <AnimatedSection className="w-full">
-            <h1 className="mx-auto text-center text-sand" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '80px', lineHeight: '112%', letterSpacing: '-0.01em', textAlign: 'center' }}>
+            <h1 className="hero-entry mx-auto text-center text-sand transition-transform duration-700 hover:scale-[1.01]" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '80px', lineHeight: '112%', letterSpacing: '-0.01em', textAlign: 'center' }}>
               <span className="block">We operate where the</span>
               <span className="block">stakes are highest.</span>
             </h1>
@@ -110,13 +115,13 @@ export default function Home() {
             <div className="grid w-full gap-[14px] sm:grid-cols-2 lg:grid-cols-4">
               {expertise.slice(0, 4).map((item, index) => (
                 <AnimatedSection key={item.slug} delay={index * 0.08} className="relative">
-                  <div className="group relative flex h-full flex-col overflow-hidden bg-[#4A0B68] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(0,0,0,0.18)]" style={{ width: '100%', height: '100%' }}>
+                  <div className="group relative flex h-full flex-col overflow-hidden bg-[#4A0B68] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(0,0,0,0.22)]" style={{ width: '100%', height: '100%' }}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#250238]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="relative h-[200px] overflow-hidden bg-[#e6e0e8]">
-                      <Image src={item.slug === 'special-situations-advisory' ? '/images/Governoces.png' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-500 group-hover:scale-105" />
+                      <Image src={item.slug === 'special-situations-advisory' ? '/images/Governoces.png' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-700 ease-out group-hover:scale-110" />
                     </div>
 
-                    <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-6 pt-8 text-white transition-colors duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-7 sm:pt-9">
+                    <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-6 pt-8 text-white transition-all duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-7 sm:pt-9">
                       <div>
                         <h3 className="mb-3 text-[clamp(1.4rem,1.5vw,2.1rem)] leading-[1.1] tracking-[-0.04em] transition-transform duration-300 group-hover:translate-x-0.5" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
                           {index === 0 ? 'Governance' : item.title}
@@ -134,7 +139,7 @@ export default function Home() {
 
       <section className="relative min-h-[620px] overflow-hidden text-sand lg:min-h-[760px]" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
         <div className="absolute inset-0">
-          <Image src="/images/section.png" alt="" fill className="object-cover opacity-100" />
+          <Image src="/images/section.png" alt="" fill className="object-cover opacity-100 transition duration-[1400ms] ease-out motion-safe:animate-[drift_24s_ease-in-out_infinite_alternate]" />
         </div>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }} />
         <div className="relative z-10 mx-auto flex min-h-[620px] max-w-content items-center px-[var(--side-padding)] pb-20 pt-10 lg:min-h-[760px] lg:pb-24 lg:pt-12">
