@@ -33,7 +33,7 @@ export default function PeoplePage() {
               <AnimatedSection key={member.slug} delay={index * 0.05} className="group">
                 <Link href={`/people/${member.slug}`} className="block rounded-[1.25rem] border-[0.45rem] border-navy/20 bg-white transition-transform duration-300 hover:-translate-y-1">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-[0.9rem] bg-navy/10">
-                    <Image src={member.image} alt={member.name} fill className="object-contain object-top transition duration-700 group-hover:scale-105" />
+                    <Image src={member.image} alt={member.name} fill className="h-full w-full object-cover transition duration-700 group-hover:scale-105" style={{ objectPosition: 'center 18%' }} />
                   </div>
                   <div className="flex min-h-[4.5rem] items-center justify-between gap-3 px-3 py-3 sm:px-4">
                     <div>

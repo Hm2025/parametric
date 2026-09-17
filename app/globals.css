@@ -7,6 +7,7 @@
   --white: #fff;
   --gold: #FF9933;
   --navy: #240237;
+  --brand-purple: #250238;
   --sand: #FFF7E6;
   --light-gray: #3E075E;
   --extra-light-gray: #fff;
@@ -56,6 +57,13 @@ body {
 
   .bg-navy { color: var(--white); }
   .bg-navy .text-navy { color: var(--white); }
+  .footer-brand-text,
+  .footer-brand-text *,
+  .footer-brand-text a,
+  .footer-brand-text p,
+  .footer-brand-text span {
+    color: #250238 !important;
+  }
 
   .small-title {
     text-transform: uppercase;
