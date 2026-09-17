@@ -132,14 +132,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden text-sand" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
+      <section className="relative min-h-[620px] overflow-hidden text-sand lg:min-h-[760px]" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
         <div className="absolute inset-0">
           <Image src="/images/section.png" alt="" fill className="object-cover opacity-100" />
         </div>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }} />
-        <div className="relative z-10 mx-auto max-w-content px-[var(--side-padding)] pb-20 pt-12 lg:pb-28 lg:pt-16">
-          <div className="grid items-end gap-8 lg:grid-cols-1">
-            <AnimatedSection className="w-full pt-8 lg:pt-12">
+        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-content items-center px-[var(--side-padding)] pb-20 pt-10 lg:min-h-[760px] lg:pb-24 lg:pt-12">
+          <div className="grid w-full items-center gap-8 lg:grid-cols-1">
+            <AnimatedSection className="w-full pt-0 lg:pt-0">
               <p className="max-w-[50ch] text-white/90" style={{
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 500,
