@@ -4,10 +4,10 @@ import AnimatedSection from '@/components/AnimatedSection'
 import { allArticles } from '@/lib/data'
 
 const expertise = [
-  { slug: 'special-situations-advisory', title: <>Investigations</>, description: 'We assess allegations of fraud, corruption, money laundering, and economic crime, protecting the credibility and integrity of the response.' },
-  { slug: 'dispute-resolution', title: <>Intelligence</>, description: 'We uncover the wider context behind complex situations, identifying embedded risks that may not be visible from the immediate facts.' },
-  { slug: 'regulatory-and-compliance', title: <>Governance</>, description: 'We strengthen the structures, policies, and programs that help organizational decisions withstand scrutiny over time.' },
-  { slug: 'forensic-investigations-and-intelligence', title: <>Strategic Advisory</>, description: 'We help organizations make consequential decisions that protect reputation, strengthen stakeholder confidence, and support long-term strategic direction.' },
+  { slug: 'special-situations-advisory', title: <>Investigation</>, description: 'We strengthen the\nstructures, policies, and\nprograms that help' },
+  { slug: 'dispute-resolution', title: <>Intelligence</>, description: 'We uncover the wider\ncontext behind complex\nsituations, identifying' },
+  { slug: 'regulatory-and-compliance', title: <>Investigation</>, description: 'We strengthen the\nstructures, policies, and\nprograms that help' },
+  { slug: 'forensic-investigations-and-intelligence', title: <>Advisory</>, description: 'We help organizations\nmake consequential\ndecisions that protect\nreputation' },
   { slug: 'reputation-management-and-crisis-response', title: <>Reputation Management<br />and Crisis Response</>, description: 'Multidisciplinary teams dealing with actions and events that threaten businesses, brands, and personal reputations.' },
   { slug: 'fintech-and-digital-assets-advisory', title: <>Fintech and Digital<br />Assets Advisory</>, description: 'Advice on regulation, investigations, digital assets, and complex cryptocurrency disputes.' },
   { slug: 'civil-fraud', title: <>Civil<br />Fraud</>, description: 'Expertise in civil fraud-related investigations, litigation, asset tracing, and recovery.' },
@@ -21,103 +21,161 @@ function Arrow() {
 export default function Home() {
   return (
     <>
-      <section className="relative -mt-[6rem] min-h-[82vh] lg:-mt-[8rem] lg:min-h-[82vh] overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:pt-[8rem]">
-        <Image src="/images/Hero Picture.png" alt="Parametric office interior" fill priority className="object-cover opacity-60" />
-        <div className="absolute inset-0 bg-navy/55" />
-        <div className="relative z-10 mx-auto grid min-h-[70vh] max-w-content items-center gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-40">
-          <AnimatedSection className="lg:pt-8">
-            <h1 className="h1-display max-w-[11em] text-sand lg:max-w-none lg:whitespace-nowrap lg:text-[clamp(3rem,4vw,4rem)]">Clarity for decisions that<br />cannot afford uncertainty.</h1>
-          </AnimatedSection>
-          <AnimatedSection delay={0.2}>
-            <p className="max-w-sm text-base font-light leading-relaxed text-sand/90 lg:text-lg">
-              ParametricGC is a specialist investigations, intelligence, governance, and strategic advisory firm. We partner with organizations and their advisers to establish facts, reduce uncertainty, and provide the clarity that allows leadership to act with confidence when the consequences of a decision will endure long after the decision itself has been made.
-            </p>
+      <section className="relative -mt-[6rem] min-h-screen overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-screen lg:pt-[8rem]">
+        <Image src="/images/c3cdcc347a312cf879d2aa9038953056a8f1be5b.png" alt="City skyscrapers" fill priority className="object-cover object-center opacity-90" />
+        <div className="absolute inset-0 bg-[#25023866]" />
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-content items-center justify-center lg:min-h-[calc(100vh-8rem)]">
+          <AnimatedSection className="w-full">
+            <h1 className="mx-auto text-center text-sand" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '80px', lineHeight: '112%', letterSpacing: '-0.01em', textAlign: 'center' }}>
+              <span className="block">We operate where the</span>
+              <span className="block">stakes are highest.</span>
+            </h1>
           </AnimatedSection>
         </div>
       </section>
 
       <section className="section-padding bg-extra-light-gray text-navy">
-        <div className="mx-auto max-w-content border-t border-navy/30 pt-8 lg:pt-10">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.65fr] lg:gap-20">
+        <div className="mx-auto max-w-content">
+          <div className="mb-10">
+            <p className="mb-5 text-[clamp(1.1rem,1vw,1.5rem)] font-medium uppercase tracking-[0.12em] text-navy">About us</p>
+            <div className="h-px w-full bg-[#FF9933]" />
+          </div>
+
+          <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.3fr_1.3fr] lg:gap-16">
             <AnimatedSection>
-              <h2 className="h2-display max-w-lg">We operate where the stakes are highest.</h2>
-            </AnimatedSection>
-            <AnimatedSection delay={0.15}>
-              <div className="grid gap-8 md:grid-cols-2 lg:gap-14">
-                <div className="space-y-6 font-light">
-                  <p>Every organization will eventually face a situation that tests its judgment in ways it did not anticipate, whether that takes the form of an allegation, a regulatory inquiry, financial misconduct, a governance failure, or risks that have embedded themselves within everyday operations without attracting attention until they surface under circumstances no one would have chosen.</p>
-                  <p>What determines how an organization emerges from that moment is the quality of the decisions it makes while the uncertainty is still unresolved, and that quality depends on more than technical expertise alone.</p>
-                </div>
-                <div className="space-y-6 font-light">
-                  <p>It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.</p>
-                  <p>This is the space in which ParametricGC operates, and it is the standard to which every engagement we undertake is held.</p>
-                </div>
+              <div className="max-w-[6.5ch] text-navy" style={{
+                fontFamily: 'var(--font-effra), sans-serif',
+                fontWeight: 300,
+                fontStyle: 'normal',
+                fontSize: '40px',
+                lineHeight: '0.94',
+                letterSpacing: '-0.04em',
+                textAlign: 'left',
+                margin: 0,
+                whiteSpace: 'nowrap',
+              }}>
+                <div className="block">We operate</div>
+                <div className="block">where the stakes</div>
+                <div className="block">are highest.</div>
               </div>
-              <Link href="/people" className="button-primary mt-10 border-navy/40 text-navy hover:border-navy">Speak with our team to discuss your requirements. <Arrow /></Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.15}>
+              <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+                  Every organization will eventually face a situation that tests its judgment in ways it did not anticipate, whether that takes the form of an allegation, a regulatory inquiry, financial misconduct, a governance failure, or risks that have embedded themselves within everyday operations without attracting attention until they surface under circumstances no one would have chosen.
+                </p>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '-12px 0 0', color: '#250238' }}>
+                  What determines how an organization emerges from that moment is the quality of the decisions it makes while the uncertainty is
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+                  It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.
+                </p>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '42px 0 0', color: '#250238' }}>
+                  This is the space in which ParametricGC operates, and it is the standard to which every engagement we undertake is held.
+                </p>
+              </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-[#3E075E] pt-8 lg:pt-10">
-        <div className="mx-auto max-w-content">
-          <div className="grid gap-12 border-t border-[var(--border-color)] pt-8 lg:grid-cols-[0.72fr_1.6fr] lg:gap-20 lg:pt-10">
+      <section className="section-padding bg-[#250238] pt-8 lg:pt-10" style={{ width: '100%', minHeight: 'auto', transform: 'none', opacity: 1 }}>
+        <div className="mx-auto max-w-content w-full">
+          <div className="mb-8">
+            <p className="small-title text-white">Services</p>
+            <div className="mt-4 h-px w-full bg-[#FF9933]" />
+          </div>
+
+          <div className="grid items-start gap-8 lg:grid-cols-[0.72fr_1.6fr] lg:gap-10">
             <AnimatedSection>
-              <p className="small-title mb-6 text-white">Services</p>
-              <h2 className="h2-display max-w-sm text-white">Expertise for consequential decisions.</h2>
+              <h2 className="max-w-[9ch] text-white" style={{
+                fontFamily: 'var(--font-effra), sans-serif',
+                fontWeight: 300,
+                fontStyle: 'normal',
+                fontSize: 'clamp(2.6rem, 3vw, 4.2rem)',
+                lineHeight: '0.94',
+                letterSpacing: '-0.05em',
+                margin: 0,
+              }}>
+                Expertise for consequential decisions.
+              </h2>
             </AnimatedSection>
 
-            <div className="relative">
-              <div className="absolute left-5 top-5 hidden h-px w-[calc(100%-2.5rem)] bg-[#FF9933]/50 lg:block" />
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-                {expertise.slice(0, 4).map((item, index) => (
-                  <AnimatedSection key={item.slug} delay={index * 0.08} className="relative">
-                    <details className="group relative z-10 flex min-h-[330px] flex-col border border-[#FF9933]/40 bg-[#6B0CA3]/20 transition-colors open:border-[#FF9933] open:bg-[#6B0CA3]/35 hover:border-[#FF9933] hover:bg-[#6B0CA3]/35">
-                      <div className="relative h-24 overflow-hidden border-b border-white/15 bg-white/10 sm:h-28"><Image src={item.slug === 'special-situations-advisory' ? '/images/Impartial-Investigation-1.webp' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-90" /></div>
-                      <summary className="flex min-h-36 cursor-pointer list-none flex-col justify-between p-5 [&::-webkit-details-marker]:hidden sm:min-h-44 sm:p-6">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF9933] text-xs text-[#FF9933] transition-colors group-hover:bg-[#FF9933] group-hover:text-[#240237]">{String(index + 1).padStart(2, '0')}</span>
-                        <span className="mt-8 flex items-end justify-between gap-4 text-xl leading-tight text-white">{item.title}<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/30 text-lg font-light leading-none text-[#FF9933] transition-transform group-hover:rotate-45">+</span></span>
-                      </summary>
-                      <div className="hidden border-t border-white/15 px-5 pb-6 pt-5 group-hover:block sm:px-6">
-                        <p className="line-clamp-3 text-sm font-light leading-relaxed text-white/70">{item.description}</p>
-                        <Link href={`/expertise/${item.slug}`} className="small-title mt-5 inline-flex items-center gap-3 text-gold">Find out more <Arrow /></Link>
+            <div className="grid w-full gap-[14px] sm:grid-cols-2 lg:grid-cols-4">
+              {expertise.slice(0, 4).map((item, index) => (
+                <AnimatedSection key={item.slug} delay={index * 0.08} className="relative">
+                  <div className="group relative flex h-full flex-col overflow-hidden bg-[#4A0B68] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(0,0,0,0.18)]" style={{ width: '100%', height: '100%' }}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#250238]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="relative h-[185px] overflow-hidden bg-[#e6e0e8]">
+                      <Image src={item.slug === 'special-situations-advisory' ? '/images/Impartial-Investigation-1.webp' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-500 group-hover:scale-105" />
+                    </div>
+
+                    <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-5 pt-7 text-white transition-colors duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-6 sm:pt-8">
+                      <div>
+                        <h3 className="mb-3 text-[clamp(1.4rem,1.5vw,2.1rem)] leading-[1.1] tracking-[-0.04em] transition-transform duration-300 group-hover:translate-x-0.5" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
+                          {index === 0 ? 'Governance' : item.title}
+                        </h3>
+                        <p className="max-w-[18ch] text-sm leading-relaxed text-white/80 transition-opacity duration-300 group-hover:text-white">{index === 0 ? 'We assess allegations of\nfraud, corruption, money\nlaundering, and\neconomic' : item.description}</p>
                       </div>
-                    </details>
-                  </AnimatedSection>
-                ))}
-              </div>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-navy text-sand">
-        <Image src="/images/people/18.jpg" alt="" fill className="object-cover opacity-30" />
-        <div className="absolute inset-0 bg-[#FF9933]/25 mix-blend-multiply" />
-        <div className="relative z-10 mx-auto max-w-content px-[var(--side-padding)] py-24 lg:py-36">
-          <AnimatedSection className="max-w-5xl">
-            <p className="text-2xl font-light leading-tight text-white/90 lg:text-5xl">&ldquo;Every engagement we undertake begins from a different starting point, yet our objective across all of them remains consistent: to establish credible, defensible facts.&rdquo;</p>
-          </AnimatedSection>
+      <section className="relative overflow-hidden text-sand" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
+        <div className="absolute inset-0">
+          <Image src="/images/section.png" alt="" fill className="object-cover opacity-100" />
+        </div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }} />
+        <div className="relative z-10 mx-auto max-w-content px-[var(--side-padding)] pb-20 pt-12 lg:pb-28 lg:pt-16">
+          <div className="grid items-end gap-8 lg:grid-cols-1">
+            <AnimatedSection className="w-full pt-8 lg:pt-12">
+              <p className="max-w-[50ch] text-white/90" style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 500,
+                fontStyle: 'normal',
+                fontSize: '50px',
+                lineHeight: '110%',
+                letterSpacing: '0.02em',
+              }}>
+                <span style={{ display: 'block' }}>&ldquo;Every engagement we undertake</span>
+                <span style={{ display: 'block' }}>begins from a different starting point,</span>
+                <span style={{ display: 'block' }}>yet our objective across all of them,</span>
+                <span style={{ display: 'block' }}>remains consistent: to establish credible,</span>
+                <span style={{ display: 'block' }}>defensible facts.&rdquo;</span>
+              </p>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
-      <section className="section-padding bg-extra-light-gray pt-8 text-navy lg:pt-10">
+      <section className="section-padding pt-8 text-white lg:pt-10" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
         <div className="mx-auto max-w-content">
-          <AnimatedSection><h2 className="small-title mb-12 font-semibold text-navy">News &amp; Briefings</h2></AnimatedSection>
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <AnimatedSection><h2 className="small-title mb-12 font-semibold text-white">News &amp; Briefings</h2></AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {allArticles.slice(0, 4).map((article, index) => (
-              <AnimatedSection key={article.slug} delay={index * 0.08}>
-                <Link href={`/news/${article.slug}`} className="group block">
-                  <div className="relative mb-6 h-44 overflow-hidden bg-navy/10"><Image src={article.image} alt={article.title} fill className="object-cover opacity-70 transition duration-700 group-hover:scale-105" /></div>
-                  <p className="small-title mb-4 text-navy/55">{article.date}</p>
-                  <h3 className="h2-display mb-4 text-navy transition-colors group-hover:text-gold">{article.title}</h3>
-                  <p className="mb-5 text-sm leading-relaxed opacity-70">{article.excerpt}</p>
-                  <span className="small-title inline-flex items-center gap-3 text-navy transition-colors group-hover:text-gold">Read article <Arrow /></span>
+              <AnimatedSection key={article.slug} delay={index * 0.08} className="h-full">
+                <Link href={`/news/${article.slug}`} className="group flex h-full flex-col overflow-hidden rounded-none bg-[#250238] text-white shadow-none transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(41,0,55,0.2)]">
+                  <div className="relative h-44 overflow-hidden bg-navy/10"><Image src={article.image} alt={article.title} fill className="object-cover opacity-80 transition duration-700 group-hover:scale-105" /></div>
+                  <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <p className="small-title mb-4 text-white/70">{article.date}</p>
+                    <h3 className="h2-display mb-4 text-white transition-colors group-hover:text-[#f8d7aa]">{article.title}</h3>
+                    <p className="text-sm leading-relaxed text-white/80">{article.excerpt}</p>
+                  </div>
                 </Link>
               </AnimatedSection>
             ))}
           </div>
-          <AnimatedSection className="flex justify-center"><Link href="/news" className="button-primary mt-12 border-navy/40 text-navy hover:border-navy">View all articles <Arrow /></Link></AnimatedSection>
         </div>
       </section>
     </>

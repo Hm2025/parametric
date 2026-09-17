@@ -39,9 +39,9 @@ export default function Header() {
   }))
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-transform duration-500 ease-smooth">
+    <header className="fixed top-0 left-0 right-0 z-50 h-[85px] w-full bg-white/95 opacity-100 backdrop-blur-sm transition-transform duration-500 ease-smooth" style={{ top: '1px', transform: 'none' }}>
       <div className="mx-auto max-w-content px-[var(--side-padding)]">
-        <div className="flex items-center justify-between border-b border-navy/15 py-6">
+        <div className="flex items-center justify-between border-b border-navy/15 py-5">
           <Link href="/" className="relative z-10">
             <Image
               src="/images/Parametric%20Logo%20on%20White.png"

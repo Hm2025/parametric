@@ -32,6 +32,7 @@ body {
   background-color: var(--white);
   color: var(--text-color);
   font-family: var(--font-effra), sans-serif;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -59,10 +60,20 @@ body {
   .small-title {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.2;
     word-spacing: 0.17em;
     letter-spacing: 0.05em;
+  }
+
+  .text-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .text-base {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .h1-display {
@@ -97,7 +108,7 @@ body {
     position: relative;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1;
     word-spacing: 0.17em;
     white-space: nowrap;

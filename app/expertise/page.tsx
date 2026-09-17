@@ -5,7 +5,7 @@ import { services } from '@/lib/data'
 
 const primaryServices = [
   { slug: 'special-situations-advisory', title: 'Investigations', description: 'We assess allegations of fraud, corruption, money laundering, and economic crime, protecting the credibility and integrity of the response.', image: '/images/Impartial-Investigation-1.webp' },
-  { slug: 'dispute-resolution', title: 'Intelligence', description: 'We uncover the wider context behind complex situations, identifying embedded risks that may not be visible from the immediate facts.', image: '/images/Targeted-Tailored-Training-1.webp' },
+  { slug: 'dispute-resolution', title: 'Dispute Resolution', description: 'We help organizations resolve complex disputes by clarifying facts, testing the issues, and supporting decisive, defensible action.', image: '/images/Targeted-Tailored-Training-1.webp' },
   { slug: 'regulatory-and-compliance', title: 'Governance', description: 'We strengthen the structures, policies, and programs that help organizational decisions withstand scrutiny over time.', image: '/images/people.avif' },
   { slug: 'forensic-investigations-and-intelligence', title: 'Strategic Advisory', description: 'We help organizations make consequential decisions that protect reputation, strengthen stakeholder confidence, and support long-term strategic direction.', image: '/images/Strategic-Consulting-Services-1.webp' },
 ]

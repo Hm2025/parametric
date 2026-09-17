@@ -25,7 +25,7 @@ export default function PeoplePage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white pt-16 text-navy lg:pt-24">
+      <section className="section-padding bg-sand pt-16 text-navy lg:pt-24">
         <div className="mx-auto max-w-content">
           <AnimatedSection><h2 className="small-title mb-12 border-b border-navy/20 pb-4 font-bold text-navy lg:mb-20">The Team</h2></AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
