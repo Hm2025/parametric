@@ -113,7 +113,7 @@ export default function Home() {
                   <div className="group relative flex h-full flex-col overflow-hidden bg-[#4A0B68] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(0,0,0,0.18)]" style={{ width: '100%', height: '100%' }}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#250238]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="relative h-[185px] overflow-hidden bg-[#e6e0e8]">
-                      <Image src={item.slug === 'special-situations-advisory' ? '/images/Impartial-Investigation-1.webp' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-500 group-hover:scale-105" />
+                      <Image src={item.slug === 'special-situations-advisory' ? '/images/Governoces.png' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-500 group-hover:scale-105" />
                     </div>
 
                     <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-5 pt-7 text-white transition-colors duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-6 sm:pt-8">
