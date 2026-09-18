@@ -22,7 +22,9 @@ export default function Home() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-screen overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-screen lg:pt-[8rem]">
-        <Image src="/images/c3cdcc347a312cf879d2aa9038953056a8f1be5b.png" alt="City skyscrapers" fill priority className="object-cover object-center opacity-90 scale-[1.08] motion-safe:animate-[slow-pan_20s_ease-in-out_infinite_alternate]" />
+        <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover object-center opacity-90 scale-[1.08] motion-safe:animate-[slow-pan_20s_ease-in-out_infinite_alternate]">
+          <source src="/herosection.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,153,51,0.18),_transparent_32%),linear-gradient(90deg,rgba(37,2,56,0.72),rgba(37,2,56,0.52),rgba(37,2,56,0.78))]" />
         <div className="cloud cloud-one" />
         <div className="cloud cloud-two" />
@@ -67,10 +69,10 @@ export default function Home() {
 
             <AnimatedSection delay={0.15}>
               <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
                   Every organization will eventually face a situation that tests its judgment in ways it did not anticipate, whether that takes the form of an allegation, a regulatory inquiry, financial misconduct, a governance failure, or risks that have embedded themselves within everyday operations without attracting attention until they surface under circumstances no one would have chosen.
                 </p>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: '-12px 0 0', color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '-12px 0 0', color: '#250238' }}>
                   What determines how an organization emerges from that moment is the quality of the decisions it makes while the uncertainty is
                 </p>
               </div>
@@ -78,10 +80,10 @@ export default function Home() {
 
             <AnimatedSection delay={0.2}>
               <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
                   It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.
                 </p>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '19px', lineHeight: '145%', letterSpacing: '0.02em', margin: '18px 0 0', color: '#250238' }}>
+                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '18px 0 0', color: '#250238' }}>
                   This is the space in which ParametricGC operates, and it is the standard to which every engagement we undertake is held.
                 </p>
               </div>
@@ -118,7 +120,7 @@ export default function Home() {
                   <div className="group relative flex h-full flex-col overflow-hidden bg-[#4A0B68] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(0,0,0,0.22)]" style={{ width: '100%', height: '100%' }}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#250238]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="relative h-[200px] overflow-hidden bg-[#e6e0e8]">
-                      <Image src={item.slug === 'special-situations-advisory' ? '/images/Governoces.png' : item.slug === 'dispute-resolution' ? '/images/Targeted-Tailored-Training-1.webp' : item.slug === 'regulatory-and-compliance' ? '/images/people.avif' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/Strategic-Consulting-Services-1.webp' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-700 ease-out group-hover:scale-110" />
+                      <Image src={item.slug === 'special-situations-advisory' ? '/images/invist.png' : item.slug === 'dispute-resolution' ? '/images/intell.png' : item.slug === 'regulatory-and-compliance' ? '/images/gov.png' : item.slug === 'forensic-investigations-and-intelligence' ? '/images/advisory.png' : '/images/bg1.avif'} alt="" fill className="object-cover opacity-90 transition duration-700 ease-out group-hover:scale-110" />
                     </div>
 
                     <div className="relative flex flex-1 flex-col justify-start bg-[#3F075E] px-5 pb-6 pt-8 text-white transition-all duration-300 group-hover:bg-[#4A0B68] sm:px-6 sm:pb-7 sm:pt-9">
@@ -137,44 +139,53 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative min-h-[620px] overflow-hidden text-sand lg:min-h-[760px]" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
+      <section className="relative min-h-[620px] overflow-hidden text-sand lg:min-h-[760px]" style={{ background: 'linear-gradient(180deg, #F66A00 0%, #F6993F 100%)' }}>
         <div className="absolute inset-0">
           <Image src="/images/section.png" alt="" fill className="object-cover opacity-100 transition duration-[1400ms] ease-out motion-safe:animate-[drift_24s_ease-in-out_infinite_alternate]" />
         </div>
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(255, 106, 0, 0.98) 0%, rgba(246, 153, 63, 0.8) 100%)' }} />
         <div className="relative z-10 mx-auto flex min-h-[620px] max-w-content items-center px-[var(--side-padding)] pb-20 pt-10 lg:min-h-[760px] lg:pb-24 lg:pt-12">
           <div className="grid w-full items-center gap-8 lg:grid-cols-1">
             <AnimatedSection className="w-full pt-0 lg:pt-0">
-              <p className="max-w-[50ch] text-white/90" style={{
+              <p className="max-w-[1300px] text-white/95" style={{
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 500,
                 fontStyle: 'normal',
                 fontSize: '48px',
-                lineHeight: '110%',
+                lineHeight: '135%',
                 letterSpacing: '0.02em',
               }}>
                 <span style={{ display: 'block' }}>&ldquo;Every engagement we undertake</span>
                 <span style={{ display: 'block' }}>begins from a different starting point,</span>
-                <span style={{ display: 'block' }}>yet our objective across all of them,</span>
-                <span style={{ display: 'block' }}>remains consistent: to establish credible,</span>
-                <span style={{ display: 'block' }}>defensible facts.&rdquo;</span>
+                <span style={{ display: 'block' }}>yet our objective across all of them</span>
+                <span style={{ display: 'block' }}>remains consistent: to establish</span>
+                <span style={{ display: 'block' }}>credible defensible facts.&rdquo;</span>
               </p>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      <section className="section-padding pt-8 text-white lg:pt-10" style={{ background: 'linear-gradient(180deg, #FF6501 3.62%, rgba(255, 156, 56, 0.42) 100%)' }}>
-        <div className="mx-auto max-w-content">
-          <AnimatedSection><h2 className="small-title mb-12 font-semibold text-white">News &amp; Briefings</h2></AnimatedSection>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <section className="section-padding pb-14 pt-8 lg:pt-10" style={{ background: 'linear-gradient(180deg, #FFF7E6 0%, #FFF7E6 100%)' }}>
+        <div className="mx-auto max-w-[1280px]">
+          <AnimatedSection className="mb-10">
+            <div className="flex items-center justify-start">
+              <h2 className="mb-5 text-[clamp(1.2rem,1.55vw,2.2rem)] font-semibold uppercase tracking-[0.08em] text-[#2d0b35]">News &amp; Briefings</h2>
+            </div>
+            <div className="h-px w-full bg-[#2d0b35]/60" />
+          </AnimatedSection>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {allArticles.slice(0, 4).map((article, index) => (
               <AnimatedSection key={article.slug} delay={index * 0.08} className="h-full">
-                <Link href={`/news/${article.slug}`} className="group flex h-full flex-col overflow-hidden rounded-none bg-[#250238] text-white shadow-none transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(41,0,55,0.2)]">
-                  <div className="relative h-44 overflow-hidden bg-navy/10"><Image src={article.image} alt={article.title} fill className="object-cover opacity-80 transition duration-700 group-hover:scale-105" /></div>
+                <Link href={`/news/${article.slug}`} className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-[#ffdb9f]/80 bg-[#250238] text-white shadow-none transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(41,0,55,0.2)]">
+                  <div className="relative h-56 overflow-hidden bg-[#250238]">
+                    <Image src={article.image} alt={article.title} fill className="object-cover opacity-80 transition duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(58,20,70,0.18)_0%,rgba(37,2,56,0.75)_100%)]" />
+                  </div>
                   <div className="flex flex-1 flex-col p-5 sm:p-6">
                     <p className="small-title mb-4 text-white/70">{article.date}</p>
-                    <h3 className="h2-display mb-4 text-white transition-colors group-hover:text-[#f8d7aa]">{article.title}</h3>
+                    <h3 className="mb-4 text-[clamp(1.8rem,2vw,2.4rem)] leading-[1.08] tracking-[-0.04em] text-white transition-colors group-hover:text-[#f8d7aa]" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 400 }}>{article.title}</h3>
                     <p className="text-sm leading-relaxed text-white/80">{article.excerpt}</p>
                   </div>
                 </Link>

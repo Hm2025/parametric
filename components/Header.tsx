@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
@@ -10,6 +10,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [megaOpen, setMegaOpen] = useState(false)
   const pathname = usePathname()
+  const megaMenuRef = useRef<HTMLDivElement | null>(null)
+  const servicesTriggerRef = useRef<HTMLButtonElement | null>(null)
 
   useEffect(() => {
     setMenuOpen(false)
@@ -24,19 +26,61 @@ export default function Header() {
     }
   }, [menuOpen])
 
+  useEffect(() => {
+    if (!megaOpen) return
+
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node
+      const clickedInsideMenu = megaMenuRef.current?.contains(target)
+      const clickedTrigger = servicesTriggerRef.current?.contains(target)
+
+      if (!clickedInsideMenu && !clickedTrigger) {
+        setMegaOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [megaOpen])
+
   const navLinks = [
-    { label: 'Our Services', href: '/expertise', hasMega: true },
     { label: 'About', href: '/about' },
+    { label: 'Our Services', href: '/expertise', hasMega: true },
     { label: 'Our Team', href: '/people' },
     { label: 'News & Briefings', href: '/news' },
     { label: 'Podcast', href: '/podcast' },
     { label: 'Contact Us', href: '/contact' },
   ]
 
-  const expertiseMenu = services.slice(0, 4).map((service, index) => ({
-    ...service,
-    title: ['Investigations', 'Intelligence', 'Governance', 'Strategic Advisory'][index],
-  }))
+  const expertiseMenu = [
+    {
+      slug: 'special-situations-advisory',
+      title: 'Investigation',
+      description: 'We strengthen the structures, policies, and programs that help',
+      image: '/images/invist.png',
+    },
+    {
+      slug: 'dispute-resolution',
+      title: 'Intelligence',
+      description: 'We uncover the wider context behind complex situations, identifying',
+      image: '/images/intell.png',
+    },
+    {
+      slug: 'regulatory-and-compliance',
+      title: 'Investigation',
+      description: 'We strengthen the structures, policies, and programs that help',
+      image: '/images/gov.png',
+    },
+    {
+      slug: 'forensic-investigations-and-intelligence',
+      title: 'Advisory',
+      description: 'We help organizations make consequential decisions that protect reputation',
+      image: '/images/advisory.png',
+    },
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-[85px] w-full bg-white/95 opacity-100 backdrop-blur-sm transition-transform duration-500 ease-smooth" style={{ top: '1px', transform: 'none' }}>
@@ -61,7 +105,7 @@ export default function Header() {
                 className="relative"
               >
                 {link.hasMega ? (
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-1">
                     <Link
                       href={link.href}
                       className="small-title relative -mx-8 block px-8 py-5 text-navy transition-colors hover:text-gold"
@@ -69,12 +113,15 @@ export default function Header() {
                       {link.label}
                     </Link>
                     <button
+                      ref={servicesTriggerRef}
                       type="button"
-                      aria-label="Toggle services menu"
+                      aria-label={megaOpen ? 'Close services menu' : 'Open services menu'}
                       onClick={() => setMegaOpen((value) => !value)}
-                      className="relative -ml-5 p-3 text-navy transition-colors hover:text-gold"
+                      className="flex h-8 w-8 items-center justify-center text-navy transition-colors hover:text-gold"
                     >
-                      <span className="relative -top-0.5 inline-block h-[0.45em] w-[0.45em] rotate-[135deg] border-r border-t border-current" />
+                      <span
+                        className={`mt-[-1px] inline-block h-[0.45em] w-[0.45em] border-r border-t border-current transition-transform duration-200 ${megaOpen ? 'rotate-[315deg]' : 'rotate-[135deg]'}`}
+                      />
                     </button>
                   </div>
                 ) : (
@@ -87,42 +134,52 @@ export default function Header() {
                 )}
 
                 {link.hasMega && megaOpen && (
-                  <div className="absolute left-1/2 top-full z-40 mt-3 w-[min(92vw,860px)] -translate-x-1/2 overflow-hidden border border-white/20 bg-[#240237] shadow-[0_24px_60px_rgba(0,0,0,0.32)]">
-                    <div className="grid grid-cols-1 lg:grid-cols-[38%_62%]">
-                      <div className="relative hidden min-h-[430px] overflow-hidden border-r border-white/20 lg:block">
-                        <Image
-                          src="/images/bg1.avif"
-                          alt=""
-                          fill
-                          className="object-cover opacity-65"
-                        />
-                        <div className="absolute inset-0 bg-[#240237]/50" />
-                        <div className="absolute inset-x-7 bottom-8">
-                          <p className="small-title mb-3 text-white/60">Our services</p>
-                          <p className="max-w-[15rem] text-2xl leading-tight text-white">Clarity when complexity matters.</p>
+                  <div ref={megaMenuRef} className="absolute left-1/2 top-full z-40 mt-3 w-[min(96vw,1100px)] -translate-x-1/2 overflow-hidden rounded-[20px] border border-white/10 bg-[#2a0b39] shadow-[0_32px_80px_rgba(18,5,29,0.45)] backdrop-blur-sm">
+                    <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.9fr]">
+                      <div className="relative hidden min-h-[500px] overflow-hidden border-r border-white/10 lg:block">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,155,77,0.25),_transparent_30%),linear-gradient(145deg,rgba(32,6,43,0.88),rgba(18,4,29,0.96))]" />
+                        <div className="absolute inset-0 opacity-80">
+                          <Image
+                            src="/images/Impartial-Investigation-1.webp"
+                            alt=""
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#160718]/85 via-[#1a061e]/30 to-transparent" />
+                        <div className="absolute inset-x-8 bottom-8 z-10">
+                          <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.26em] text-white/70">Our services</p>
+                          <p className="max-w-[15rem] text-4xl leading-[0.92] tracking-[-0.05em] text-white" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
+                            Clarity when complexity matters.
+                          </p>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2">
-                        {expertiseMenu.map((service) => (
+                        {expertiseMenu.map((service, index) => (
                           <Link
                             key={service.slug}
                             href={`/expertise/${service.slug}`}
-                            className="group flex min-h-[150px] flex-col border-b border-white/20 p-5 transition-colors hover:bg-white/10 sm:min-h-[215px] sm:border-l sm:p-6"
+                            className="group relative flex min-h-[220px] flex-col overflow-hidden border-b border-white/10 bg-[#2c0c3b] p-3 transition-all duration-300 hover:bg-[#340f46] sm:min-h-[250px] sm:p-4"
                             onClick={() => setMegaOpen(false)}
                           >
-                            <div className="relative h-24 overflow-hidden bg-[#240237] sm:h-28">
+                            <div className="relative h-36 overflow-hidden rounded-t-[14px] bg-[#250238] sm:h-40">
                               <Image
-                                src={service.image || '/images/bg1.avif'}
+                                src={service.image}
                                 alt={service.title}
                                 fill
-                                className="object-cover opacity-75 transition duration-700 group-hover:scale-105"
+                                className="object-cover transition duration-700 group-hover:scale-105"
                               />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#17071d]/65 via-transparent to-transparent" />
                             </div>
-                            <div className="mt-auto pt-5">
-                              <h3 className="small-title text-white">
+                            <div className="flex flex-1 flex-col justify-end pt-4">
+                              <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.24em] text-[#f7d7aa]">Service</p>
+                              <h3 className="text-[28px] leading-[1.05] tracking-[-0.05em] text-white" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
                                 {service.title}
                               </h3>
+                              <p className="mt-2 max-w-[20ch] text-sm leading-relaxed text-white/70">
+                                {service.description}
+                              </p>
                             </div>
                           </Link>
                         ))}

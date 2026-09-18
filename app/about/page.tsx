@@ -65,15 +65,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-content">
           <AnimatedSection>
             <div className="border-t border-navy/25 pt-8 lg:pt-10">
-              <p className="small-title mb-12 font-bold text-navy lg:mb-20">Our Purpose</p>
+              <p className="small-title mb-6 font-bold text-navy lg:mb-8">Our Purpose</p>
               <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
                 <div className="border-t border-navy/25 pt-6">
                   <h2 className="h2-display mb-6 font-bold text-navy">Our Mission</h2>
-                  <p className="max-w-2xl text-xl font-light leading-relaxed text-navy/80 lg:text-2xl">We help organizations move from uncertainty to informed action through investigation, intelligence, governance, and strategic advisory that establishes credible facts and supports decisions capable of withstanding scrutiny from every direction.</p>
+                  <p className="max-w-2xl leading-relaxed text-navy/80" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em' }}>We help organizations move from uncertainty to informed action through investigation, intelligence, governance, and strategic advisory that establishes credible facts and supports decisions capable of withstanding scrutiny from every direction.</p>
                 </div>
                 <div className="border-t border-navy/25 pt-6">
                   <h2 className="h2-display mb-6 font-bold text-navy">Our Vision</h2>
-                  <p className="max-w-2xl text-xl font-light leading-relaxed text-navy/80 lg:text-2xl">To be the firm that organizations and their advisers engage first when judgment is being tested, recognized across sectors and jurisdictions for the independence of our findings, the rigor of our process, and the clarity of our counsel.</p>
+                  <p className="max-w-2xl leading-relaxed text-navy/80" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em' }}>To be the firm that organizations and their advisers engage first when judgment is being tested, recognized across sectors and jurisdictions for the independence of our findings, the rigor of our process, and the clarity of our counsel.</p>
                 </div>
               </div>
             </div>
@@ -85,10 +85,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-content border-t border-navy/25 pt-8 lg:pt-10">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
             <AnimatedSection>
-              <p className="h2-display max-w-4xl text-justify">ParametricGC was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.</p>
+              <p className="max-w-4xl text-justify" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', color: '#250238' }}>ParametricGC was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.</p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <p className="h2-display max-w-4xl text-justify">The firm is deliberately structured to remain close to the work. Every engagement is led by senior professionals who are directly involved from instruction through to deliverable, which means the experience and judgment a client is promised at the outset is the experience and judgment they receive throughout. This structure is a choice, and it is one the firm has protected as it has grown, because the quality of investigative and advisory work depends on the people doing it, not the brand sitting above them.</p>
+              <p className="max-w-4xl text-justify" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', color: '#250238' }}>The firm is deliberately structured to remain close to the work. Every engagement is led by senior professionals who are directly involved from instruction through to deliverable, which means the experience and judgment a client is promised at the outset is the experience and judgment they receive throughout. This structure is a choice, and it is one the firm has protected as it has grown, because the quality of investigative and advisory work depends on the people doing it, not the brand sitting above them.</p>
             </AnimatedSection>
           </div>
         </div>
@@ -99,11 +99,11 @@ export default function AboutPage() {
           <div className="grid gap-12 border-t border-white/20 pt-8 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20 lg:pt-10">
             <AnimatedSection>
               <p className="small-title mb-8 font-bold text-sand/70 lg:mb-12">Certified status</p>
-              <h2 className="h1-display max-w-xl text-sand">Certified Women&apos;s Business Enterprise</h2>
+              <h2 className="max-w-xl text-sand" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '40px', lineHeight: '1.1', letterSpacing: '0.02em' }}>Certified Women&apos;s Business Enterprise</h2>
             </AnimatedSection>
             <AnimatedSection delay={0.12}>
               <div className="border-t border-gold pt-6 lg:pt-8">
-                <p className="max-w-3xl text-xl font-light leading-relaxed text-sand/90 lg:text-2xl">ParametricGC holds certified Women&apos;s Business Enterprise status, a designation that is independently verified and recognized by procurement and supplier diversity programs across the public sector, international development agencies, and multinational corporations. For organizations with supplier diversity commitments or procurement frameworks that prioritize certified businesses, this means ParametricGC can be engaged through those channels without additional qualification steps. The certification reflects how the firm was founded and how it continues to operate, and it provides a practical advantage for clients whose procurement processes require or favor certified suppliers.</p>
+                <p className="max-w-3xl leading-relaxed text-sand/90" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em' }}>ParametricGC holds certified Women&apos;s Business Enterprise status, a designation that is independently verified and recognized by procurement and supplier diversity programs across the public sector, international development agencies, and multinational corporations. For organizations with supplier diversity commitments or procurement frameworks that prioritize certified businesses, this means ParametricGC can be engaged through those channels without additional qualification steps. The certification reflects how the firm was founded and how it continues to operate, and it provides a practical advantage for clients whose procurement processes require or favor certified suppliers.</p>
               </div>
             </AnimatedSection>
           </div>
