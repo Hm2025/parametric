@@ -2,16 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import AnimatedSection from '@/components/AnimatedSection'
 
-const assetPathPrefix = 'https://www.figma.com/api/mcp/asset/eb1aff18-1b91-457e-be98-196e197ddecd'
-const imgHero = `${assetPathPrefix}/0a52d.png`
-const imgPurposeCard = `${assetPathPrefix}/ea7de.png`
-const imgStoryCard = `${assetPathPrefix}/f76dc.png`
-const imgCertificateBitmap = `${assetPathPrefix}/c09ec.png`
-const imgCertificateIllustration = `${assetPathPrefix}/b2788.png`
-const imgSeal = '/images/seal.png'
-const imgDividerPurpose = `${assetPathPrefix}/7897b.svg`
-const imgDividerStory = `${assetPathPrefix}/738ca.svg`
-const imgDividerStandFor = `${assetPathPrefix}/5b2fb.svg`
+const imgHero = '/image 10.png'
+const imgPurposeCard = '/Rectangle 11.png'
+const imgStoryCard = '/Rectangle 11 (1).png'
+const imgCertificatePeople = '/freepik_br_3738c82c-b144-4540-a978-9b7b98c0060f 1.png'
+const imgCertificatePattern = '/Bitmap (4) 1.png'
+const imgCertificateSeal = '/image 14.png'
+const imgValuesPortrait = '/Group 2.png'
 
 const values = [
   {
@@ -35,53 +32,51 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <section className="relative -mt-[6rem] min-h-[42rem] overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-[42rem] lg:pt-[8rem]">
+      <section className="relative -mt-[6rem] min-h-[620px] overflow-hidden bg-[#250238] px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-[799px] lg:pt-[8rem]">
         <div className="absolute inset-0 overflow-hidden">
-          <img src={imgHero} alt="Parametric office interior" className="h-full w-full object-cover opacity-100" style={{ objectFit: 'cover' }} />
-          <div className="absolute inset-0 bg-[rgba(37,2,56,0.68)]" />
+          <Image src={imgHero} alt="" fill priority sizes="100vw" className="object-cover object-center" />
         </div>
-        <div className="relative z-10 mx-auto flex min-h-[34rem] max-w-content items-center justify-center pb-12 lg:pb-20">
+        <div className="relative z-10 mx-auto flex min-h-[544px] max-w-content items-center justify-center px-2 pb-12 text-center lg:min-h-[671px] lg:px-0 lg:pb-20">
           <AnimatedSection>
-            <h1 className="text-center text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: 'clamp(3.2rem, 4vw, 5rem)', lineHeight: '0.92', letterSpacing: '-0.06em', maxWidth: '12.5em', margin: 0 }}>
-              Helping clients navigate an increasingly complex world
+            <h1 className="max-w-[14ch] text-[clamp(2.25rem,4.17vw,5rem)] font-light leading-[1.1] tracking-[0.005em] text-white sm:max-w-none" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              <span className="block">Helping clients navigate an</span>
+              <span className="block">increasingly complex world</span>
             </h1>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="section-padding bg-[#fff7e6] text-navy pt-16 lg:pt-24">
+      <section className="section-padding bg-[#fff7e6] text-navy pt-16 lg:pt-20">
         <div className="mx-auto max-w-content">
           <AnimatedSection>
-            <div className="border-t border-[#250238]/20 pt-8 lg:pt-10">
-              <div className="mb-8 flex items-center justify-start lg:mb-10">
-                <img src={imgDividerPurpose} alt="" className="h-[1px] w-full max-w-[72rem] object-cover" />
+            <div>
+              <div className="mb-8 lg:mb-12">
+                <h2 className="mb-6 text-[clamp(1.5rem,1.7vw,2rem)] font-semibold uppercase leading-tight tracking-[0.02em] text-[#250238]">
+                  Our Purpose
+                </h2>
+                <div className="h-px w-full bg-[#ff6a1a]" />
               </div>
-              <p className="mb-8 text-[1.6rem] font-semibold uppercase tracking-[0.12em] text-[#250238] lg:mb-10" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.12em' }}>
-                Our Purpose
-              </p>
 
-              <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_1.35fr] lg:gap-12">
-                <div className="overflow-hidden rounded-[1rem] border border-[#250238]/10 bg-white/20">
-                  <div className="relative h-[22rem] w-full">
-                    <img src={imgPurposeCard} alt="Parametric team" className="h-full w-full object-cover" />
-                  </div>
+              <div className="grid items-center gap-9 lg:grid-cols-[1.8fr_1fr] lg:gap-14">
+                <div className="relative aspect-[849/525] w-full overflow-hidden rounded-[14px] bg-white/20">
+                  <Image src={imgPurposeCard} alt="Parametric colleagues walking together outside an office" fill sizes="(min-width: 1024px) 62vw, 100vw" className="object-cover" />
                 </div>
 
-                <div className="space-y-10 lg:space-y-14">
-                  <div className="border-t border-[#250238]/20 pt-6">
-                    <h2 className="mb-5 text-[2.4rem] leading-[1.1] tracking-[-0.04em] text-[#250238]" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 400, margin: 0 }}>
+                <div className="space-y-9 lg:space-y-12">
+                  <div>
+                    <h3 className="mb-5 text-[clamp(2rem,2.1vw,2.5rem)] font-semibold leading-[1.08] text-[#250238]">
                       Our Mission
-                    </h2>
-                    <p className="max-w-[29rem] text-[1.25rem] leading-[1.45] tracking-[0.01em] text-[#250238]/80" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, margin: 0 }}>
+                    </h3>
+                    <p className="max-w-[29rem] text-[clamp(1.05rem,1.1vw,1.25rem)] leading-[1.45] tracking-[0.01em] text-[#250238]/90">
                       We help organizations move from uncertainty to informed action through investigation, intelligence, governance, and strategic advisory that establishes credible facts and supports decisions capable of withstanding scrutiny from every direction.
                     </p>
                   </div>
 
-                  <div className="border-t border-[#250238]/20 pt-6">
-                    <h2 className="mb-5 text-[2.4rem] leading-[1.1] tracking-[-0.04em] text-[#250238]" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 400, margin: 0 }}>
+                  <div>
+                    <h3 className="mb-5 text-[clamp(2rem,2.1vw,2.5rem)] font-semibold leading-[1.08] text-[#250238]">
                       Our Vision
-                    </h2>
-                    <p className="max-w-[29rem] text-[1.25rem] leading-[1.45] tracking-[0.01em] text-[#250238]/80" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, margin: 0 }}>
+                    </h3>
+                    <p className="max-w-[29rem] text-[clamp(1.05rem,1.1vw,1.25rem)] leading-[1.45] tracking-[0.01em] text-[#250238]/90">
                       To be the firm that organizations and their advisers engage first when judgment is being tested, recognized across sectors and jurisdictions for the independence of our findings, the rigor of our process, and the clarity of our counsel.
                     </p>
                   </div>
@@ -92,62 +87,104 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-[#250238] pt-16 text-white lg:pt-24" style={{ minHeight: '44rem' }}>
+      <section className="section-padding bg-[#250238] pt-14 text-white sm:pt-16 lg:pt-20">
         <div className="mx-auto max-w-content">
-          <div className="grid gap-8 border-t border-white/20 pt-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 lg:pt-10">
-            <AnimatedSection>
-              <div className="pr-0 lg:pr-6">
-                <p className="mb-8 text-[1.6rem] font-semibold uppercase tracking-[0.12em] text-white/90" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.12em' }}>
-                  Our Story
-                </p>
-                <div className="space-y-5 text-[1.25rem] leading-[1.45] tracking-[0.01em] text-white/90" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}>
-                  <p className="m-0">
-                    ParametricGC was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.
-                  </p>
-                  <p className="m-0">
-                    The firm is deliberately structured to remain close to the work. Every engagement is led by senior professionals who are directly involved from instruction through to deliverable, which means the experience and judgment a client is promised at the outset is the experience and judgment they receive throughout. This structure is a choice, and it is one the firm has protected as it has grown, because the quality of investigative and advisory work depends on the people doing it, not the brand sitting above them.
-                  </p>
-                </div>
-              </div>
-            </AnimatedSection>
+          <AnimatedSection>
+            <div className="mb-7 sm:mb-9">
+              <h2 className="mb-5 text-[clamp(1.6rem,1.8vw,2rem)] font-semibold uppercase leading-tight tracking-[0.02em] text-white">
+                Our Story
+              </h2>
+              <div className="h-px w-full bg-[#ff6a1a]" />
+            </div>
 
-            <AnimatedSection delay={0.08}>
-              <div className="relative h-[22rem] overflow-hidden rounded-[1rem] border border-white/10 bg-white/10 lg:h-[25rem]">
-                <img src={imgStoryCard} alt="Parametric team discussion" className="h-full w-full object-cover" />
+            <div className="grid items-start gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
+              <div className="space-y-5 text-[clamp(1rem,1.1vw,1.25rem)] leading-[1.45] tracking-[0.01em] text-white/95">
+                <p className="m-0">
+                  <strong className="font-semibold">ParametricGC</strong> was founded on the premise that organizations facing their most consequential moments deserve advisory and investigative support that is genuinely independent, commercially aware, and held to a standard that does not bend under pressure. The firm was established by Lloydette Bai-Marrow, whose career spanning corporate investigations, compliance strategy, and regulatory engagement across multiple sectors and jurisdictions gave her a clear view of what organizations needed from their advisers and where the existing market fell short.
+                </p>
+                <p className="m-0">
+                  The firm is deliberately structured to remain close to the work. Every engagement is led by senior professionals who are directly involved from instruction through to deliverable, which means the experience and judgment a client is promised at the outset is the experience and judgment they receive throughout. This structure is a choice, and it is one the firm has protected as it has grown, because the quality of investigative and advisory work depends on the people doing it, not the brand sitting above them.
+                </p>
               </div>
-            </AnimatedSection>
-          </div>
+
+              <div className="relative aspect-[671/525] w-full overflow-hidden rounded-[14px] bg-white/10">
+                <Image src={imgStoryCard} alt="Colleagues meeting around a table in a bright office" fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      <section className="section-padding bg-[#fff7e6] text-navy pt-16 lg:pt-24">
-        <div className="mx-auto max-w-content">
+      <section className="bg-white px-[var(--side-padding)] py-12 text-[#250238] sm:py-16 lg:min-h-[799px] lg:py-0">
+        <div className="mx-auto max-w-[1481px] lg:pt-[86px]">
           <AnimatedSection>
-            <div className="mb-12 flex items-center justify-start lg:mb-20">
-              <img src={imgDividerStandFor} alt="" className="h-[1px] w-full max-w-[72rem] object-cover" />
+            <div className="mb-6 sm:mb-8 lg:mb-0">
+              <h2 className="mb-5 text-[clamp(1.5rem,1.8vw,1.875rem)] font-semibold uppercase leading-[1.117] tracking-[-0.05em] lg:text-[30px]">
+                Certified Status
+              </h2>
+              <div className="h-px w-full bg-[#ff6501] lg:mx-auto lg:w-[calc(100%-2px)]" />
             </div>
-            <h2 className="mb-12 text-[1.6rem] font-semibold uppercase tracking-[0.12em] text-[#250238] lg:mb-20" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.12em' }}>
-              What We Stand For
-            </h2>
-          </AnimatedSection>
 
-          <div className="space-y-8 lg:space-y-10">
-            {values.map((value, index) => (
-              <AnimatedSection key={value.title} delay={index * 0.06}>
-                <div className="grid gap-6 border-t border-[#250238]/20 pt-6 lg:grid-cols-[22rem_1fr] lg:gap-10">
-                  <h3 className="text-[2rem] leading-[1.12] tracking-[-0.04em] text-[#250238]" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 400, margin: 0 }}>
-                    {value.title}
-                  </h3>
-                  <p className="max-w-[44rem] text-[1.25rem] leading-[1.45] tracking-[0.01em] text-[#250238]/80" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, margin: 0 }}>
-                    {value.description}
+            <div className="grid items-center gap-8 pt-2 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-8 lg:pt-[11px]">
+              <div className="relative mx-auto aspect-[790/636] w-full max-w-[790px] lg:mx-0">
+                <Image src={imgCertificatePattern} alt="" width={661} height={604} sizes="(min-width: 1024px) 42vw, 100vw" className="absolute left-0 top-[5%] h-[99%] w-[84%] object-fill" />
+                <Image src={imgCertificatePeople} alt="Two women business leaders" width={790} height={636} sizes="(min-width: 1024px) 42vw, 100vw" className="absolute inset-0 h-full w-full object-contain" />
+                <Image src={imgCertificateSeal} alt="Women-Owned Business Enterprise certified seal" width={192} height={192} className="absolute bottom-[5%] left-[51%] h-[clamp(4rem,8.33vw,10rem)] w-[clamp(4rem,8.33vw,10rem)] -translate-x-1/2 object-contain" />
+              </div>
+
+              <div className="pt-2 lg:pt-[40px]">
+                <h3 className="mb-7 max-w-[19ch] text-[clamp(2rem,2.1vw,2.5rem)] font-normal leading-[1.35] tracking-[0.02em] sm:mb-10 lg:mb-[40px] lg:max-w-[651px] lg:text-[40px]">
+                  Certified Women&apos;s Business Enterprise
+                </h3>
+                <div className="space-y-6 text-[clamp(1rem,1.05vw,1.25rem)] leading-[1.45] tracking-[0.02em] lg:max-w-[689px] lg:text-[20px]">
+                  <p className="m-0">
+                    ParametricGC holds certified Women&apos;s Business Enterprise status, a designation that is independently verified and recognized by procurement and supplier diversity programs across the public sector, international development agencies, and multinational corporations.
+                  </p>
+                  <p className="m-0">
+                    For organizations with supplier diversity commitments or procurement frameworks that prioritize certified businesses, this means ParametricGC can be engaged through those channels without additional qualification steps. The certification reflects how the firm was founded and how it continues to operate, and it provides a practical advantage for clients whose procurement processes require or favor certified suppliers.
                   </p>
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="bg-[#fff7e6] px-[var(--side-padding)] py-12 text-[#250238] sm:py-16 lg:py-[88px]">
+        <div className="mx-auto max-w-[1480px]">
+          <AnimatedSection>
+            <div className="mb-8 sm:mb-10">
+              <h2 className="mb-6 text-[clamp(1.5rem,1.8vw,1.875rem)] font-semibold uppercase leading-[1.12] tracking-[-0.02em] lg:text-[30px]">
+                What We Stand For
+              </h2>
+              <div className="h-px w-full bg-[#ff6501]" />
+            </div>
+          </AnimatedSection>
+
+          <div className="grid items-start gap-10 lg:grid-cols-[1.85fr_1fr] lg:gap-12">
+            <div className="space-y-7 sm:space-y-9 lg:space-y-8">
+              {values.map((value, index) => (
+                <AnimatedSection key={value.title} delay={index * 0.06}>
+                  <div className="grid gap-3 sm:gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:gap-8">
+                    <h3 className="m-0 max-w-[16ch] text-[clamp(1.5rem,1.7vw,2rem)] font-normal leading-[1.12] text-[#160c0c]" style={{ fontFamily: 'var(--font-effra), sans-serif' }}>
+                      {value.title}
+                    </h3>
+                    <p className="m-0 text-[clamp(1rem,1.05vw,1.25rem)] leading-[1.2] tracking-[0.01em] text-[#160c0c]" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}>
+                      {value.description}
+                    </p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+
+            <AnimatedSection delay={0.12} className="w-full">
+              <div className="relative mx-auto aspect-[520/706] w-full max-w-[520px] overflow-hidden rounded-[18px] lg:mx-0">
+                <Image src={imgValuesPortrait} alt="Two colleagues reviewing information together on a tablet" fill sizes="(min-width: 1024px) 32vw, (min-width: 640px) 70vw, 100vw" className="object-cover" />
+              </div>
+            </AnimatedSection>
           </div>
 
-
-          <AnimatedSection className="mt-16 border-t border-[#250238]/20 pt-8">
+          <AnimatedSection className="mt-12 border-t border-[#250238]/20 pt-7 sm:mt-14 lg:mt-16">
             <Link href="/contact" className="button-primary border-[#250238]/40 text-[#250238] hover:border-[#250238]">
               Speak with our team
               <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
