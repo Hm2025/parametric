@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return people.map((person) => ({ slug: person.slug }))
 }
 
-export default function PersonProfilePage({ params }: { params: { slug: string } }) {
-  const person = people.find((candidate) => candidate.slug === params.slug)
+export default async function PersonProfilePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const person = people.find((candidate) => candidate.slug === slug)
 
   if (!person) return notFound()
 

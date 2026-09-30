@@ -14,6 +14,13 @@ const expertise = [
   { slug: 'private-client-advisory', title: <>Private Client<br />Advisory</>, description: 'Specific expertise for high net worth individuals and owner-managed businesses in the UK and internationally.' },
 ]
 
+const featuredArticles = [
+  { article: allArticles[0], image: allArticles[0].image, excerpt: allArticles[0].excerpt },
+  { article: allArticles[1], image: allArticles[1].image, excerpt: allArticles[1].excerpt },
+  { article: allArticles[1], image: allArticles[2].image, excerpt: allArticles[0].excerpt },
+  { article: allArticles[2], image: allArticles[3].image, excerpt: allArticles[2].excerpt },
+]
+
 function Arrow() {
   return <span className="inline-block h-2 w-2 rotate-45 border-r border-t border-current" />
 }
@@ -26,7 +33,6 @@ export default function Home() {
           <source src="/herosection.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,153,51,0.18),_transparent_32%),linear-gradient(90deg,rgba(37,2,56,0.72),rgba(37,2,56,0.52),rgba(37,2,56,0.78))]" />
-        <div className="cloud cloud-one" />
         <div className="cloud cloud-two" />
         <div className="cloud cloud-three" />
         <div className="hero-orb left-[-10%] top-[12%] h-72 w-72 bg-[#ff9b4d]/20 blur-3xl" />
@@ -41,49 +47,47 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-extra-light-gray text-navy">
-        <div className="mx-auto max-w-content">
-          <div className="mb-10">
-            <p className="mb-5 text-[clamp(1.1rem,1vw,1.5rem)] font-medium uppercase tracking-[0.12em] text-navy">About us</p>
-            <div className="h-px w-full bg-[#FF9933]" />
+      <section className="bg-white px-[var(--side-padding)] py-12 text-[#250238] sm:py-16 2xl:min-h-[799px] 2xl:py-0">
+        <div className="mx-auto max-w-[1459px] 2xl:pt-[86px]">
+          <div className="mb-8 sm:mb-10 2xl:mb-[31px]">
+            <h2 className="mb-5 pl-0 text-[clamp(1.1rem,1.6vw,1.875rem)] font-semibold uppercase leading-[1.117] tracking-[-0.05em] 2xl:mb-[30px] 2xl:pl-[18px] 2xl:text-[30px]">
+              About Us
+            </h2>
+            <div className="h-px w-full bg-[#ff6501]" />
           </div>
 
-          <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.3fr_1.3fr] lg:gap-16">
-            <AnimatedSection>
-              <div className="max-w-[6.5ch] text-navy" style={{
-                fontFamily: 'var(--font-effra), sans-serif',
-                fontWeight: 300,
-                fontStyle: 'normal',
-                fontSize: '40px',
-                lineHeight: '0.94',
-                letterSpacing: '-0.04em',
-                textAlign: 'left',
-                margin: 0,
-                whiteSpace: 'nowrap',
-              }}>
-                <div className="block">We operate</div>
-                <div className="block">where the stakes</div>
-                <div className="block">are highest.</div>
-              </div>
+          <div className="grid min-w-0 items-start gap-8 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-10 2xl:grid-cols-[363px_480px_478px] 2xl:justify-between 2xl:gap-0 2xl:pl-[18px] 2xl:pt-[47px]">
+            <AnimatedSection className="min-w-0 lg:col-span-2 2xl:col-span-1">
+              <h3 className="m-0 max-w-[363px] text-[clamp(2rem,2.08vw,2.5rem)] font-normal leading-[1.35] tracking-[0.02em] text-[#250238] 2xl:text-[40px]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <span className="block">We operate</span>
+                <span className="block">where the stakes</span>
+                <span className="block">are highest.</span>
+              </h3>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.15}>
-              <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+            <AnimatedSection delay={0.15} className="min-w-0">
+              <div className="grid gap-8 2xl:gap-[68px]">
+                <p className="m-0 text-[clamp(1rem,1.05vw,1.25rem)] leading-[1.45] tracking-[0.02em] 2xl:text-[20px]">
                   Every organization will eventually face a situation that tests its judgment in ways it did not anticipate, whether that takes the form of an allegation, a regulatory inquiry, financial misconduct, a governance failure, or risks that have embedded themselves within everyday operations without attracting attention until they surface under circumstances no one would have chosen.
                 </p>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '-12px 0 0', color: '#250238' }}>
+                <p className="m-0 text-[clamp(1rem,1.05vw,1.25rem)] leading-[1.45] tracking-[0.02em] 2xl:hidden">
+                  What determines how an organization emerges from that moment is the quality of the decisions it makes while the uncertainty is still unresolved, and that quality depends on more than technical expertise alone.
+                </p>
+                <p className="m-0 hidden text-[20px] leading-[1.45] tracking-[0.02em] 2xl:block">
                   What determines how an organization emerges from that moment is the quality of the decisions it makes while the uncertainty is
                 </p>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <div className="text-navy/90" style={{ display: 'grid', rowGap: '68px' }}>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: 0, color: '#250238' }}>
+            <AnimatedSection delay={0.2} className="min-w-0">
+              <div className="grid gap-8 2xl:gap-[68px]">
+                <p className="m-0 text-[clamp(1rem,1.05vw,1.25rem)] leading-[1.45] tracking-[0.02em] 2xl:hidden">
                   It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.
                 </p>
-                <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontStyle: 'normal', fontSize: '20px', lineHeight: '145%', letterSpacing: '0.02em', margin: '18px 0 0', color: '#250238' }}>
+                <p className="m-0 hidden text-[20px] leading-[1.45] tracking-[0.02em] 2xl:block">
+                  still unresolved, and that quality depends on more than technical expertise alone. It depends on the ability to establish facts without assumption, interpret complexity without adding to it, and provide counsel that remains sound when the consequences reach beyond legal and regulatory exposure into reputation, stakeholder confidence, and the long-term trajectory of the organization itself.
+                </p>
+                <p className="m-0 text-[clamp(1rem,1.05vw,1.25rem)] leading-[1.45] tracking-[0.02em] 2xl:text-[20px]">
                   This is the space in which ParametricGC operates, and it is the standard to which every engagement we undertake is held.
                 </p>
               </div>
@@ -139,58 +143,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative min-h-[620px] overflow-hidden text-sand lg:min-h-[760px]" style={{ background: 'linear-gradient(180deg, #F66A00 0%, #F6993F 100%)' }}>
+      <section aria-label="Our approach" className="relative isolate min-h-[620px] overflow-hidden bg-[#c4b4a8] text-[#250238] lg:min-h-[799px]">
         <div className="absolute inset-0">
-          <Image src="/images/section.png" alt="" fill className="object-cover opacity-100 transition duration-[1400ms] ease-out motion-safe:animate-[drift_24s_ease-in-out_infinite_alternate]" />
+          <Image src="/image 23.png" alt="" width={1946} height={799} priority sizes="100vw" className="absolute left-1/2 top-0 h-[799px] w-[1946px] max-w-none -translate-x-1/2 object-fill" />
         </div>
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(255, 106, 0, 0.98) 0%, rgba(246, 153, 63, 0.8) 100%)' }} />
-        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-content items-center px-[var(--side-padding)] pb-20 pt-10 lg:min-h-[760px] lg:pb-24 lg:pt-12">
-          <div className="grid w-full items-center gap-8 lg:grid-cols-1">
-            <AnimatedSection className="w-full pt-0 lg:pt-0">
-              <p className="max-w-[1300px] text-white/95" style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 500,
-                fontStyle: 'normal',
-                fontSize: '48px',
-                lineHeight: '135%',
-                letterSpacing: '0.02em',
-              }}>
-                <span style={{ display: 'block' }}>&ldquo;Every engagement we undertake</span>
-                <span style={{ display: 'block' }}>begins from a different starting point,</span>
-                <span style={{ display: 'block' }}>yet our objective across all of them</span>
-                <span style={{ display: 'block' }}>remains consistent: to establish</span>
-                <span style={{ display: 'block' }}>credible defensible facts.&rdquo;</span>
-              </p>
-            </AnimatedSection>
-          </div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(255, 130, 49, 0.76) 0%, rgba(251, 169, 78, 0.76) 100%)' }} />
+        <div aria-hidden="true" className="absolute right-[8%] top-[5%] aspect-[538/511] w-[clamp(9rem,18vw,21rem)] opacity-30">
+          <Image src="/image 12.png" alt="" fill sizes="(min-width: 1024px) 21rem, 18vw" className="object-contain" />
+        </div>
+        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1920px] items-start px-[clamp(2rem,11vw,13rem)] pb-16 pt-[clamp(5.5rem,12vh,6.4375rem)] lg:min-h-[799px] lg:pb-20 lg:pt-[103px]">
+          <AnimatedSection className="w-full">
+            <blockquote className="m-0 max-w-[1060px] text-[clamp(2rem,2.083vw,2.5rem)] font-medium leading-[1.35] tracking-[0.02em] text-[#240237] lg:text-[40px]">
+              Every engagement we undertake<br className="hidden lg:block" />{' '}
+              begins from a different starting point,<br className="hidden lg:block" />{' '}
+              yet our objective across all of them remains<br className="hidden lg:block" />{' '}
+              consistent: to establish credible, defensible facts.
+            </blockquote>
+          </AnimatedSection>
         </div>
       </section>
 
-      <section className="section-padding pb-14 pt-8 lg:pt-10" style={{ background: 'linear-gradient(180deg, #FFF7E6 0%, #FFF7E6 100%)' }}>
-        <div className="mx-auto max-w-[1280px]">
-          <AnimatedSection className="mb-10">
-            <div className="flex items-center justify-start">
-              <h2 className="mb-5 text-[clamp(1.2rem,1.55vw,2.2rem)] font-semibold uppercase tracking-[0.08em] text-[#2d0b35]">News &amp; Briefings</h2>
-            </div>
-            <div className="h-px w-full bg-[#2d0b35]/60" />
+      <section className="bg-[#fff7e6] px-[var(--side-padding)] py-[clamp(3.25rem,5vw,5.75rem)]">
+        <div className="mx-auto max-w-[1526px]">
+          <AnimatedSection className="mb-8 sm:mb-10">
+            <h2 className="mb-5 px-4 text-[clamp(1.45rem,1.7vw,2rem)] font-semibold uppercase leading-tight tracking-[0.02em] text-[#250238]">
+              News &amp; Briefings
+            </h2>
+            <div className="h-px w-full bg-[#ff6a1a]" />
           </AnimatedSection>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {allArticles.slice(0, 4).map((article, index) => (
-              <AnimatedSection key={article.slug} delay={index * 0.08} className="h-full">
-                <Link href={`/news/${article.slug}`} className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-[#ffdb9f]/80 bg-[#250238] text-white shadow-none transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(41,0,55,0.2)]">
-                  <div className="relative h-56 overflow-hidden bg-[#250238]">
-                    <Image src={article.image} alt={article.title} fill className="object-cover opacity-80 transition duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(58,20,70,0.18)_0%,rgba(37,2,56,0.75)_100%)]" />
-                  </div>
-                  <div className="flex flex-1 flex-col p-5 sm:p-6">
-                    <p className="small-title mb-4 text-white/70">{article.date}</p>
-                    <h3 className="mb-4 text-[clamp(1.8rem,2vw,2.4rem)] leading-[1.08] tracking-[-0.04em] text-white transition-colors group-hover:text-[#f8d7aa]" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 400 }}>{article.title}</h3>
-                    <p className="text-sm leading-relaxed text-white/80">{article.excerpt}</p>
-                  </div>
-                </Link>
-              </AnimatedSection>
-            ))}
+          <div className="rounded-2xl bg-[#fff0d3] p-4 sm:p-6 lg:p-[30px_34px]">
+            <div className="grid auto-cols-[84%] grid-flow-col gap-4 overflow-x-auto snap-x snap-mandatory pb-2 sm:auto-cols-auto sm:grid-flow-row sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:pb-0 lg:grid-cols-4 lg:gap-6">
+              {featuredArticles.map(({ article, image, excerpt }, index) => (
+                <AnimatedSection key={`${article.slug}-${index}`} delay={index * 0.08} className="h-full snap-start">
+                  <Link href={`/news/${article.slug}`} className="group relative block aspect-[0.7] h-full min-h-[390px] overflow-hidden rounded-[18px] bg-[#4b1764] text-white sm:min-h-0">
+                    <Image src={image} alt="" fill sizes="(min-width: 1024px) 22vw, (min-width: 640px) 42vw, 84vw" className="object-cover transition duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-[#4b1764]/70 transition-colors duration-300 group-hover:bg-[#4b1764]/60" />
+                    <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-7 lg:p-8">
+                      <h3 className="max-w-[17ch] text-[clamp(1.35rem,1.55vw,1.9rem)] leading-[1.12] text-white" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
+                        {article.title}
+                      </h3>
+                      <p className="line-clamp-3 max-w-[32ch] text-[clamp(0.95rem,1vw,1.15rem)] leading-[1.22] text-white/95" style={{ fontFamily: 'var(--font-effra), sans-serif', fontWeight: 300 }}>
+                        {excerpt}
+                      </p>
+                    </div>
+                  </Link>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>

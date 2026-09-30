@@ -56,11 +56,12 @@ export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }))
 }
 
-export default function ExpertisePage({ params }: { params: { slug: string } }) {
-  const service = services.find((s) => s.slug === params.slug)
+export default async function ExpertisePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const service = services.find((s) => s.slug === slug)
   if (!service) return notFound()
 
-  if (params.slug === 'special-situations-advisory') {
+  if (slug === 'special-situations-advisory') {
     return (
       <>
         <section className="relative -mt-[6rem] flex min-h-[28vh] items-end pb-12 px-[var(--side-padding)] bg-navy pt-[6rem] lg:-mt-[8rem] lg:min-h-[32vh] lg:pt-[8rem]">
@@ -143,7 +144,7 @@ export default function ExpertisePage({ params }: { params: { slug: string } }) 
     )
   }
 
-  const pageContent = servicePageContent[params.slug as keyof typeof servicePageContent]
+  const pageContent = servicePageContent[slug as keyof typeof servicePageContent]
 
   return (
     <>
