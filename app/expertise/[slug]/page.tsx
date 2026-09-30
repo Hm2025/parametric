@@ -64,7 +64,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ slug
   if (slug === 'special-situations-advisory') {
     return (
       <>
-        <section className="relative -mt-[6rem] flex min-h-[28vh] items-end pb-12 px-[var(--side-padding)] bg-navy pt-[6rem] lg:-mt-[8rem] lg:min-h-[32vh] lg:pt-[8rem]">
+        <section className="article-hero relative -mt-[6rem] flex items-end bg-navy pt-[6rem] lg:-mt-[8rem] lg:pt-[8rem]">
           <div className="mx-auto max-w-content w-full">
             <AnimatedSection>
               <p className="small-title mb-4 text-white/70">Investigations</p>
@@ -73,7 +73,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ slug
           </div>
         </section>
 
-        <section className="section-padding bg-extra-light-gray pt-16 text-navy lg:pt-24">
+        <section className="section-padding bg-white pt-16 text-navy lg:pt-24">
           <div className="mx-auto max-w-content">
             <AnimatedSection>
               <div className="mb-12 border-b border-navy/20 pb-4">
@@ -81,27 +81,28 @@ export default async function ExpertisePage({ params }: { params: Promise<{ slug
               </div>
             </AnimatedSection>
 
-            <div className="space-y-12 lg:space-y-16">
+            <div className="space-y-8 lg:space-y-12">
               <AnimatedSection>
-                <div className="relative aspect-[16/7] overflow-hidden bg-navy/10">
-                  <Image src="/images/Impartial-Investigation-1.webp" alt="Special Situations Advisory" fill className="object-contain opacity-75" />
+                <div className="article-feature relative aspect-[1104/627] overflow-hidden border border-navy/15 bg-navy/5">
+                  <Image src="/images/Impartial-Investigation-1.webp" alt="Special Situations Advisory" fill sizes="(min-width: 1552px) 1104px, 100vw" className="object-cover" />
+                  <span className="article-feature-overlay" aria-hidden="true" />
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection delay={0.15} className="grid items-start gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
-                <div className="space-y-6 font-light text-base leading-relaxed">
-                  <p className="h2-display max-w-[26rem] font-medium !text-[1.85rem] !leading-[1.2]">
+              <AnimatedSection delay={0.15}>
+                <article className="article-copy">
+                  <div>
+                    <p>
                     When an allegation of fraud, corruption, money laundering, or other form of economic crime comes to light, the credibility of the organization&apos;s response is as important as the substance of that response. ParametricGC conducts investigations that are independent by design and defensible by the standard to which they are held, establishing facts through evidence rather than assumption and delivering findings that withstand internal, regulatory, and legal examination.
-                  </p>
-                </div>
-                <div className="space-y-6 font-light text-base leading-relaxed">
-                  <p>
+                    </p>
+                    <p>
                     Our investigative work encompasses fraud and financial misconduct, corruption and bribery, money laundering and proceeds of crime, whistleblower and protected disclosure allegations, workplace misconduct carrying regulatory or reputational consequences, and concerns arising from third-party, vendor, or supply chain relationships. Every investigation we undertake follows a clear, documented methodology designed to protect the integrity of the process and the weight of its conclusions.
-                  </p>
-                  <p>
+                    </p>
+                    <p>
                     <strong>In practice:</strong> A multinational organization identified irregularities in procurement activity across two operating regions. ParametricGC was instructed to conduct an independent investigation, which involved reviewing transactional records spanning three years, interviewing staff across multiple jurisdictions, and producing a findings report that was subsequently used to support both internal disciplinary proceedings and a voluntary regulatory disclosure.
-                  </p>
-                </div>
+                    </p>
+                  </div>
+                </article>
               </AnimatedSection>
             </div>
           </div>
@@ -148,7 +149,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ slug
 
   return (
     <>
-      <section className="relative min-h-[40vh] flex items-end pb-12 px-[var(--side-padding)] bg-navy">
+      <section className="article-hero relative flex items-end bg-navy">
         <div className="max-w-content mx-auto w-full">
           <AnimatedSection>
             <p className="small-title mb-4 text-white/70">{pageContent?.title || service.title}</p>
@@ -157,26 +158,32 @@ export default async function ExpertisePage({ params }: { params: Promise<{ slug
         </div>
       </section>
 
-      <section className="section-padding bg-sand pt-16 text-navy lg:pt-24">
+      <section className="section-padding bg-white pt-16 text-navy lg:pt-24">
         <div className="mx-auto max-w-content">
-          <div className="space-y-12 lg:space-y-16">
+          <div className="space-y-8 lg:space-y-12">
             <AnimatedSection>
-              <div className="relative aspect-[16/7] overflow-hidden bg-navy/10">
-                <Image src={pageContent?.image || service.image || '/images/bg1.avif'} alt={pageContent?.title || service.title} fill className="object-contain opacity-75" />
+              <div className="mb-8 border-b border-navy/20 pb-4">
+                <p className="small-title text-navy/70">Overview</p>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.15} className="grid items-start gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
-              <div className="space-y-6 font-light text-base leading-relaxed">
-                <p className="h2-display max-w-[26rem] font-medium !text-[1.85rem] !leading-[1.2]">{pageContent?.paragraphs[0] || service.shortDesc}</p>
+            <AnimatedSection>
+              <div className="article-feature relative aspect-[1104/627] overflow-hidden border border-navy/15 bg-navy/5">
+                <Image src={pageContent?.image || service.image || '/images/bg1.avif'} alt={pageContent?.title || service.title} fill sizes="(min-width: 1552px) 1104px, 100vw" className="object-cover" />
+                <span className="article-feature-overlay" aria-hidden="true" />
               </div>
-              <div className="space-y-6 font-light text-base leading-relaxed">
-                {(pageContent?.paragraphs.slice(1) || [
-                  `Our ${service.title.toLowerCase()} practice advises on the full spectrum of matters, from routine advisory work to the most complex, high-value transactions and disputes. We take a commercial, results-oriented approach that prioritises your strategic objectives.`,
-                ]).map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.15}>
+              <article className="article-copy">
+                <div>
+                  {[pageContent?.paragraphs[0] || service.shortDesc, ...(pageContent?.paragraphs.slice(1) || [
+                    `Our ${service.title.toLowerCase()} practice advises on the full spectrum of matters, from routine advisory work to the most complex, high-value transactions and disputes. We take a commercial, results-oriented approach that prioritises your strategic objectives.`,
+                  ])].map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </article>
             </AnimatedSection>
           </div>
         </div>
