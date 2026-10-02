@@ -33,11 +33,11 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-[620px] overflow-hidden bg-[#250238] px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-[799px] lg:pt-[8rem]">
-        <div className="absolute inset-0 overflow-hidden">
+        <AnimatedSection className="absolute inset-0 overflow-hidden">
           <Image src={imgHero} alt="" fill priority sizes="100vw" className="object-cover object-center" />
-        </div>
+        </AnimatedSection>
         <div className="relative z-10 mx-auto flex min-h-[544px] max-w-content items-center justify-center px-2 pb-12 text-center lg:min-h-[671px] lg:px-0 lg:pb-20">
-          <AnimatedSection>
+          <AnimatedSection delay={1.8}>
             <h1 className="max-w-[14ch] text-[clamp(2.25rem,4.17vw,5rem)] font-light leading-[1.1] tracking-[0.005em] text-white sm:max-w-none" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               <span className="block">Helping clients navigate an</span>
               <span className="block">increasingly complex world</span>

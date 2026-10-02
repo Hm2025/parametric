@@ -21,10 +21,12 @@ export default function ExpertiseIndexPage() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-[48vh] overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-[54vh] lg:pt-[8rem]">
-        <Image src="/images/bg1-1.avif" alt="Parametric professional services" fill priority className="object-cover opacity-55" />
+        <AnimatedSection className="absolute inset-0">
+          <Image src="/images/bg1-1.avif" alt="Parametric professional services" fill priority className="object-cover opacity-55" />
+        </AnimatedSection>
         <div className="absolute inset-0 bg-navy/65" />
         <div className="relative z-10 mx-auto flex min-h-[36vh] max-w-content items-end pb-16 lg:pb-24">
-          <AnimatedSection>
+          <AnimatedSection delay={1.8}>
             <p className="small-title mb-5 text-white/70">Our Services</p>
             <h1 className="h1-display max-w-[11em] text-sand">Expertise for decisions that carry consequences</h1>
           </AnimatedSection>

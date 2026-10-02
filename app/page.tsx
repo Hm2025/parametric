@@ -39,7 +39,7 @@ export default function Home() {
         <div className="hero-orb right-[-8%] bottom-[7%] h-80 w-80 bg-[#ffd5a2]/15 blur-3xl" />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-content items-center justify-center lg:min-h-[calc(100vh-8rem)]">
           <AnimatedSection className="w-full">
-            <h1 className="hero-entry mx-auto text-center text-sand transition-transform duration-700 hover:scale-[1.01]" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '80px', lineHeight: '112%', letterSpacing: '-0.01em', textAlign: 'center' }}>
+            <h1 className="mx-auto text-center text-sand transition-transform duration-700 hover:scale-[1.01]" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontStyle: 'normal', fontSize: '80px', lineHeight: '112%', letterSpacing: '-0.01em', textAlign: 'center' }}>
               <span className="block">We operate where the</span>
               <span className="block">stakes are highest.</span>
             </h1>
@@ -144,15 +144,15 @@ export default function Home() {
       </section>
 
       <section aria-label="Our approach" className="relative isolate min-h-[620px] overflow-hidden bg-[#c4b4a8] text-[#250238] lg:min-h-[799px]">
-        <div className="absolute inset-0">
+        <AnimatedSection className="absolute inset-0">
           <Image src="/image 23.png" alt="" width={1946} height={799} priority sizes="100vw" className="absolute left-1/2 top-0 h-[799px] w-[1946px] max-w-none -translate-x-1/2 object-fill" />
-        </div>
+        </AnimatedSection>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(255, 130, 49, 0.76) 0%, rgba(251, 169, 78, 0.76) 100%)' }} />
         <div aria-hidden="true" className="absolute right-[8%] top-[5%] aspect-[538/511] w-[clamp(9rem,18vw,21rem)] opacity-30">
           <Image src="/image 12.png" alt="" fill sizes="(min-width: 1024px) 21rem, 18vw" className="object-contain" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1920px] items-start px-[clamp(2rem,11vw,13rem)] pb-16 pt-[clamp(5.5rem,12vh,6.4375rem)] lg:min-h-[799px] lg:pb-20 lg:pt-[103px]">
-          <AnimatedSection className="w-full">
+          <AnimatedSection delay={1.8} className="w-full">
             <blockquote className="m-0 max-w-[1060px] text-[clamp(2rem,2.083vw,2.5rem)] font-medium leading-[1.35] tracking-[0.02em] text-[#240237] lg:text-[40px]">
               Every engagement we undertake<br className="hidden lg:block" />{' '}
               begins from a different starting point,<br className="hidden lg:block" />{' '}

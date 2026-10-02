@@ -7,10 +7,12 @@ export default function PeoplePage() {
   return (
     <>
       <section className="relative -mt-[6rem] min-h-[78vh] overflow-hidden bg-navy px-[var(--side-padding)] pt-[6rem] lg:-mt-[8rem] lg:min-h-[78vh] lg:pt-[8rem]">
-        <Image src="/images/people-hero.jpg" alt="Parametric team" fill priority className="object-cover opacity-45" />
+        <AnimatedSection className="absolute inset-0">
+          <Image src="/images/people-hero.jpg" alt="Parametric team" fill priority className="object-cover opacity-45" />
+        </AnimatedSection>
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-content flex-col justify-end pb-16 lg:pb-24">
-          <AnimatedSection>
+          <AnimatedSection delay={1.8}>
             <h1 className="h1-display max-w-[11em] text-sand">Our people bring together legal, investigative, and strategic expertise</h1>
           </AnimatedSection>
         </div>

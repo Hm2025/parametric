@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import AnimatedSection from '@/components/AnimatedSection'
 import { notFound } from 'next/navigation'
 import { people } from '@/lib/people'
 
@@ -16,13 +17,13 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
   return (
     <main className="-mt-[8rem] min-h-screen bg-[#240237] text-navy lg:grid lg:grid-cols-2 lg:items-start">
       <section className="relative flex min-h-[58vh] items-center justify-center overflow-hidden bg-[#240237] px-8 py-16 before:absolute before:inset-0 before:opacity-40 before:[background-image:linear-gradient(30deg,transparent_24%,rgba(255,255,255,0.05)_25%,transparent_26%,transparent_74%,rgba(255,255,255,0.05)_75%,transparent_76%),linear-gradient(150deg,transparent_24%,rgba(255,255,255,0.05)_25%,transparent_26%,transparent_74%,rgba(255,255,255,0.05)_75%,transparent_76%)] before:[background-size:54px_94px] lg:sticky lg:top-0 lg:h-screen lg:min-h-0 lg:px-16 lg:pt-[8rem]">
-        <div className="relative aspect-[4/5] w-full max-w-[28rem] overflow-hidden bg-white/10 shadow-2xl">
+        <AnimatedSection className="relative aspect-[4/5] w-full max-w-[28rem] overflow-hidden bg-white/10 shadow-2xl">
           <Image src={person.image} alt={person.name} fill priority className="object-cover" />
-        </div>
+        </AnimatedSection>
       </section>
 
       <section className="relative bg-sand px-[var(--side-padding)] py-14 lg:min-h-screen lg:px-16 lg:py-20 lg:pt-[13rem] xl:px-24">
-        <div className="mx-auto flex min-h-full max-w-2xl flex-col">
+        <AnimatedSection delay={1.8} className="mx-auto flex min-h-full max-w-2xl flex-col">
           <div className="flex items-start justify-between gap-8 border-b border-navy/20 pb-10">
             <div>
               <p className="small-title mb-5 font-bold text-navy/60">Our People</p>
@@ -50,7 +51,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
               <p>ParametricGC brings together senior professionals who establish credible facts, reduce uncertainty, and provide clear counsel for decisions that must withstand scrutiny.</p>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
     </main>
   )
